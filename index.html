@@ -1,109 +1,122 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abhishek Duhun – Frontend Developer</title>
-  <meta name="description" content="Portfolio of Abhishek Duhun – Frontend Developer specializing in Angular, Ionic, and modern web applications." />
-  <meta name="author" content="Abhishek Duhun" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
-      theme: {
-        extend: {
-          animation: {
-            fadeInUp: 'fadeInUp 0.8s ease-out',
-            bounceIn: 'bounceIn 1s ease-out',
-          },
-          keyframes: {
-            fadeInUp: {
-              '0%': { opacity: 0, transform: 'translateY(20px)' },
-              '100%': { opacity: 1, transform: 'translateY(0)' },
-            },
-            bounceIn: {
-              '0%': { opacity: 0, transform: 'scale(0.8)' },
-              '60%': { opacity: 1, transform: 'scale(1.05)' },
-              '100%': { transform: 'scale(1)' }
-            }
-          },
+      theme: { extend: {
+        animation: {
+          fadeIn: 'fadeIn 0.8s ease-out',
         },
-      },
+        keyframes: { fadeIn: {'0%':{opacity:0}, '100%':{opacity:1}} }
+      }}
     }
   </script>
 </head>
-
-<body class="bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-200 transition-colors duration-300 font-sans">
-
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white dark:bg-gray-900 backdrop-blur-md shadow-md py-4">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-      <h1 class="text-3xl font-bold text-blue-700 dark:text-yellow-400">Abhishek Duhun</h1>
-      <div class="flex items-center space-x-6 mt-4 md:mt-0">
-        <nav class="space-x-6 font-medium">
-          <a href="#projects" class="hover:text-blue-600 dark:hover:text-yellow-400 transition">Projects</a>
-          <a href="#skills" class="hover:text-blue-600 dark:hover:text-yellow-400 transition">Skills</a>
-          <a href="#contact" class="hover:text-blue-600 dark:hover:text-yellow-400 transition">Contact</a>
-        </nav>
-        <button id="toggleTheme" class="text-xl">🌙</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="container mx-auto px-6 py-16 space-y-24">
-    <!-- Hero -->
-    <section class="text-center animate-bounceIn">
-      <h2 class="text-4xl font-bold mb-4 text-blue-700 dark:text-yellow-400">Frontend Developer</h2>
-      <p class="text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-300">I build high-performance web & mobile apps using Angular, Ionic, and modern web technologies. With over 2 years of experience, I focus on scalable solutions for logistics, SaaS, and enterprise platforms.</p>
-      <a href="resume.pdf" download class="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 dark:bg-yellow-500 dark:text-black dark:hover:bg-yellow-400 transition-all duration-300">📄 Download Resume</a>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="animate-fadeInUp">
-      <h2 class="text-3xl font-semibold text-center mb-10 text-blue-800 dark:text-yellow-300">Projects</h2>
-      <div class="grid gap-8 md:grid-cols-3">
-        <!-- Project cards here, unchanged -->
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="animate-fadeInUp">
-      <h2 class="text-3xl font-semibold text-center mb-10 text-blue-800 dark:text-yellow-300">Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
-        <div class="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">Angular, Ionic, RxJS</div>
-        <div class="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">Playwright, Firebase, AWS</div>
-        <div class="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">GraphQL, REST, WebSockets</div>
-        <div class="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">Tailwind, Angular Material</div>
-        <div class="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">Directus, Node.js</div>
-        <div class="p-4 bg-white dark:bg-gray-800 shadow rounded-lg">JS, TS, HTML, CSS</div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="animate-fadeInUp">
-      <h2 class="text-3xl font-semibold text-center mb-10 text-blue-800 dark:text-yellow-300">Get in Touch</h2>
-      <form class="max-w-2xl mx-auto bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg space-y-6">
-        <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700" />
-        <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700" />
-        <textarea name="message" placeholder="Your Message" rows="5" required class="w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700"></textarea>
-        <button type="submit" class="w-full bg-blue-600 dark:bg-yellow-500 text-white dark:text-black px-4 py-2 rounded-full hover:bg-blue-700 dark:hover:bg-yellow-400 transition">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="text-center py-6 bg-gray-50 dark:bg-gray-900 text-gray-500 dark:text-gray-400">
-    <p>&copy; 2025 Abhishek Duhun. Crafted with 💻 and ☕</p>
-  </footer>
-
-  <!-- Theme Toggle -->
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <div class="flex">
+    <!-- Sidebar Navigation -->
+    <aside class="hidden md:flex flex-col w-64 h-screen sticky top-0 bg-gray-100 dark:bg-gray-800 p-6 space-y-4">
+      <h1 class="text-2xl font-bold">Abhishek</h1>
+      <nav class="flex flex-col space-y-2">
+        <a href="#hero" class="sidebar-link">Home</a>
+        <a href="#projects" class="sidebar-link">Projects</a>
+        <a href="#skills" class="sidebar-link">Skills</a>
+        <a href="#contact" class="sidebar-link">Contact</a>
+      </nav>
+      <button id="themeToggle" class="mt-auto p-2 bg-gray-300 dark:bg-gray-700 rounded">🌓</button>
+    </aside>
+    <!-- Main Content -->
+    <main class="flex-1 px-6 py-12 space-y-32">
+      <!-- Hero -->
+      <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center space-y-6 animate-fadeIn">
+        <h2 class="text-5xl font-bold">Hi, I'm Abhishek</h2>
+        <p class="text-lg max-w-xl">Frontend developer specializing in Angular, Ionic, and modern web apps for logistics and enterprise.</p>
+        <a href="resume.pdf" class="mt-4 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Download Resume</a>
+      </section>
+      <!-- Projects -->
+      <section id="projects" class="space-y-8">
+        <h2 class="text-4xl font-semibold text-center">Projects</h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Repeat card -->
+          <div class="group bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg p-6 transform transition group-hover:scale-105">
+            <h3 class="text-xl font-bold">FCI Supply Chain App</h3>
+            <p class="mt-2">Multilingual logistics system with GPS & EPOD using Angular 19 + Ionic 8.</p>
+            <div class="mt-4 space-x-4">
+              <a href="#" class="text-blue-600 dark:text-yellow-400 hover:underline">Live Demo</a>
+              <a href="#" class="text-blue-600 dark:text-yellow-400 hover:underline">GitHub</a>
+            </div>
+          </div>
+          <!-- Repeat other cards... -->
+        </div>
+      </section>
+      <!-- Skills -->
+      <section id="skills" class="space-y-8">
+        <h2 class="text-4xl font-semibold text-center">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="skill-card">Angular</div>
+          <div class="skill-card">RxJS</div>
+          <div class="skill-card">Tailwind CSS</div>
+          <!-- etc -->
+        </div>
+      </section>
+      <!-- Testimonials -->
+      <section id="testimonials" class="space-y-8">
+        <h2 class="text-4xl font-semibold text-center">Testimonials</h2>
+        <div class="space-y-4">
+          <div class="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg shadow">
+            “Worked with Abhishek on a logistics platform — outstanding execution and communication.”
+            <p class="mt-2 font-bold">— Client Name</p>
+          </div>
+          <!-- add more -->
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact" class="space-y-8">
+        <h2 class="text-4xl font-semibold text-center">Contact</h2>
+        <form class="max-w-lg mx-auto grid gap-6">
+          <input type="text" placeholder="Name" class="input"/>
+          <input type="email" placeholder="Email" class="input"/>
+          <textarea rows="4" placeholder="Message" class="input"></textarea>
+          <button class="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition">Send Message</button>
+        </form>
+      </section>
+      <!-- Footer -->
+      <footer class="py-6 text-center">
+        <p>© 2025 Abhishek Duhun. Crafted thoughtfully.</p>
+      </footer>
+    </main>
+  </div>
   <script>
-    const toggleBtn = document.getElementById('toggleTheme');
-    toggleBtn.addEventListener('click', () => document.documentElement.classList.toggle('dark'));
-  </script>
-</body>
+    document.getElementById('themeToggle').onclick = () =>
+      document.documentElement.classList.toggle('dark');
 
+    // Scroll-spy nav highlight
+    const links = document.querySelectorAll('.sidebar-link');
+    window.addEventListener('scroll', () => {
+      links.forEach(a => {
+        const sec = document.querySelector(a.getAttribute('href'));
+        if (sec.offsetTop <= window.scrollY + 100 && sec.offsetTop + sec.offsetHeight > window.scrollY + 100)
+          a.classList.add('font-bold');
+        else a.classList.remove('font-bold');
+      });
+    });
+  </script>
+
+  <style>
+    .sidebar-link {
+      @apply block py-2 px-3 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition;
+    }
+    .skill-card {
+      @apply p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-center shadow;
+    }
+    .input {
+      @apply w-full px-4 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100;
+    }
+  </style>
+</body>
 </html>

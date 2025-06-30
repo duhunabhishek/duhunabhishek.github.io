@@ -235,6 +235,77 @@
           color: white;
           font-family: 'Inter', sans-serif;
         }
+    .text-glow {
+          text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        
+        .skill-orb {
+          background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .skill-orb:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+          border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .skill-orb::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+          transition: left 0.5s;
+        }
+        
+        .skill-orb:hover::before {
+          left: 100%;
+        }
+        
+        .skill-category {
+          position: relative;
+        }
+        
+        .skill-category::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, currentColor, transparent);
+          opacity: 0.3;
+        }
+        
+        body {
+          background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+          color: white;
+          font-family: 'Inter', sans-serif;
+        }
+        
+        @media (max-width: 768px) {
+          .skill-orb {
+            padding: 1rem;
+          }
+          
+          .skill-orb .text-4xl {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+          }
+          
+          .skill-orb .text-5xl {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+          }
+        }
   </style>
 </head>
 <body class="bg-gray-900 text-gray-100 overflow-x-hidden">
@@ -446,50 +517,193 @@
         </div>
       </section>
       <!-- Skills Section -->
-     <section id="skills" class="py-32 px-6">Add commentMore actions
-        <div class="max-w-6xl mx-auto">
+    <section id="skills" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
           <h2 class="text-5xl font-bold text-center mb-16 text-glow">Technical Skills</h2>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <div class="skill-orb rounded-2xl p-6 text-center group">
-              <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">⚛️</div>
-              <h3 class="font-bold text-red-400">Angular</h3>
-              <p class="text-sm text-gray-400">Expert</p>
+          
+          <!-- Skill Categories -->
+          <div class="space-y-16">
+            
+            <!-- Languages & Backend -->
+            <div class="skill-category">
+              <h3 class="text-2xl font-bold mb-8 text-center text-blue-400">Languages & Backend</h3>
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
+                  <h4 class="font-bold text-yellow-400">JavaScript</h4>
+                  <p class="text-sm text-gray-400">Expert</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🔷</div>
+                  <h4 class="font-bold text-blue-600">TypeScript</h4>
+                  <p class="text-sm text-gray-400">Expert</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🟢</div>
+                  <h4 class="font-bold text-green-400">Node.js</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🔗</div>
+                  <h4 class="font-bold text-pink-400">GraphQL</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">⚙️</div>
+                  <h4 class="font-bold text-blue-300">C++</h4>
+                  <p class="text-sm text-gray-400">Intermediate</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📊</div>
+                  <h4 class="font-bold text-purple-400">Directus</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+              </div>
             </div>
-            <div class="skill-orb rounded-2xl p-6 text-center group">
-              <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📱</div>
-              <h3 class="font-bold text-blue-400">Ionic</h3>
-              <p class="text-sm text-gray-400">Advanced</p>
+
+            <!-- Frontend & Frameworks -->
+            <div class="skill-category">
+              <h3 class="text-2xl font-bold mb-8 text-center text-red-400">Frontend & Frameworks</h3>
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">⚛️</div>
+                  <h4 class="font-bold text-red-400">Angular</h4>
+                  <p class="text-sm text-gray-400">Expert</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📱</div>
+                  <h4 class="font-bold text-blue-400">Ionic</h4>
+                  <p class="text-sm text-gray-400">Expert</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">💚</div>
+                  <h4 class="font-bold text-green-500">Vue.js</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🌐</div>
+                  <h4 class="font-bold text-orange-400">HTML5/CSS3</h4>
+                  <p class="text-sm text-gray-400">Expert</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🎨</div>
+                  <h4 class="font-bold text-cyan-400">Tailwind CSS</h4>
+                  <p class="text-sm text-gray-400">Expert</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🔄</div>
+                  <h4 class="font-bold text-purple-400">NgRx</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
+                  <h4 class="font-bold text-purple-500">RxJS</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🎭</div>
+                  <h4 class="font-bold text-blue-500">PrimeNG</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+              </div>
             </div>
-            <div class="skill-orb rounded-2xl p-6 text-center group">
-              <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🔷</div>
-              <h3 class="font-bold text-blue-600">TypeScript</h3>
-              <p class="text-sm text-gray-400">Expert</p>
+
+            <!-- Databases & Tools -->
+            <div class="skill-category">
+              <h3 class="text-2xl font-bold mb-8 text-center text-green-400">Databases & Tools</h3>
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🔥</div>
+                  <h4 class="font-bold text-yellow-500">Firebase</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">☁️</div>
+                  <h4 class="font-bold text-orange-500">AWS</h4>
+                  <p class="text-sm text-gray-400">Intermediate</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🐳</div>
+                  <h4 class="font-bold text-blue-500">Docker</h4>
+                  <p class="text-sm text-gray-400">Intermediate</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🔀</div>
+                  <h4 class="font-bold text-orange-400">Git</h4>
+                  <p class="text-sm text-gray-400">Expert</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🎭</div>
+                  <h4 class="font-bold text-green-600">Playwright</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📦</div>
+                  <h4 class="font-bold text-blue-600">Webpack</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📋</div>
+                  <h4 class="font-bold text-red-500">NPM</h4>
+                  <p class="text-sm text-gray-400">Expert</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
+                  <h4 class="font-bold text-purple-500">Apollo</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-6 text-center group">
+                  <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🗺️</div>
+                  <h4 class="font-bold text-green-500">Leaflet</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+              </div>
             </div>
-            <div class="skill-orb rounded-2xl p-6 text-center group">
-              <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🎯</div>
-              <h3 class="font-bold text-purple-400">RxJS</h3>
-              <p class="text-sm text-gray-400">Advanced</p>
+
+            <!-- Concepts & Architectures -->
+            <div class="skill-category">
+              <h3 class="text-2xl font-bold mb-8 text-center text-purple-400">Concepts & Architectures</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="skill-orb rounded-2xl p-8 text-center group">
+                  <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">📱</div>
+                  <h4 class="font-bold text-blue-400 text-lg mb-2">Progressive Web Apps</h4>
+                  <p class="text-sm text-gray-400">PWAs</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-8 text-center group">
+                  <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">⚡</div>
+                  <h4 class="font-bold text-yellow-400 text-lg mb-2">Server-Side Rendering</h4>
+                  <p class="text-sm text-gray-400">SSR</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-8 text-center group">
+                  <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🏗️</div>
+                  <h4 class="font-bold text-green-400 text-lg mb-2">Micro Frontends</h4>
+                  <p class="text-sm text-gray-400">Architecture</p>
+                </div>
+              </div>
             </div>
-            <div class="skill-orb rounded-2xl p-6 text-center group">
-              <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🎨</div>
-              <h3 class="font-bold text-cyan-400">Tailwind CSS</h3>
-              <p class="text-sm text-gray-400">Expert</p>
+
+            <!-- Protocols -->
+            <div class="skill-category">
+              <h3 class="text-2xl font-bold mb-8 text-center text-cyan-400">Protocols & Communication</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="skill-orb rounded-2xl p-8 text-center group">
+                  <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🌐</div>
+                  <h4 class="font-bold text-blue-400 text-lg mb-2">HTTP/REST</h4>
+                  <p class="text-sm text-gray-400">Expert</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-8 text-center group">
+                  <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🔄</div>
+                  <h4 class="font-bold text-green-400 text-lg mb-2">WebSockets</h4>
+                  <p class="text-sm text-gray-400">Advanced</p>
+                </div>
+                <div class="skill-orb rounded-2xl p-8 text-center group">
+                  <div class="text-5xl mb-6 group-hover:scale-110 transition-transform">🔗</div>
+                  <h4 class="font-bold text-purple-400 text-lg mb-2">API Integration</h4>
+                  <p class="text-sm text-gray-400">Expert</p>
+                </div>
+              </div>
             </div>
-            <div class="skill-orb rounded-2xl p-6 text-center group">
-              <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🌐</div>
-              <h3 class="font-bold text-green-400">RESTful APIs</h3>
-              <p class="text-sm text-gray-400">Advanced</p>
-            </div>
-            <div class="skill-orb rounded-2xl p-6 text-center group">
-              <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🔄</div>
-              <h3 class="font-bold text-orange-400">Git</h3>
-              <p class="text-sm text-gray-400">Expert</p>
-            </div>
-            <div class="skill-orb rounded-2xl p-6 text-center group">
-              <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">☁️</div>
-              <h3 class="font-bold text-gray-400">AWS</h3>
-              <p class="text-sm text-gray-400">Intermediate</p>
-            </div>
+
           </div>
         </div>
       </section>

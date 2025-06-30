@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Duhun – Frontend Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="bg-white shadow-md py-6">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+      <h1 class="text-3xl font-bold text-blue-600">Abhishek Duhun</h1>
+      <nav class="mt-4 md:mt-0">
+        <a href="#projects" class="text-blue-500 hover:underline mx-2">Projects</a>
+        <a href="#skills" class="text-blue-500 hover:underline mx-2">Skills</a>
+        <a href="#contact" class="text-blue-500 hover:underline mx-2">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-10">
+    <section class="mb-16 text-center">
+      <h2 class="text-2xl font-semibold mb-2">Frontend Developer</h2>
+      <p class="max-w-2xl mx-auto">Frontend Developer with 2+ years of experience building responsive web and mobile apps using Angular, Ionic, and modern technologies. Passionate about creating scalable, user-friendly solutions.</p>
+    </section>
+
+    <section id="projects" class="mb-16">
+      <h2 class="text-xl font-semibold mb-6 border-b pb-2">Projects</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow p-4">
+          <h3 class="font-bold text-lg text-blue-600">FCI Supply Chain App</h3>
+          <p class="mt-2 text-sm">Multilingual logistics system built with Angular 19, Ionic 8, and Directus CMS. Includes GPS verification, EPOD, and role-based workflows.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <h3 class="font-bold text-lg text-blue-600">Synco Suite</h3>
+          <p class="mt-2 text-sm">B2B Logistics platform with geofencing, zone routing, and GPS tracking. Improved stop-level attendance and reduced errors by 30%.</p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <h3 class="font-bold text-lg text-blue-600">Smart Mobility Yellow App</h3>
+          <p class="mt-2 text-sm">Employee transport management app using WebSockets and GPS APIs for real-time tracking. Deployed for Vodafone Idea Ltd.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="mb-16">
+      <h2 class="text-xl font-semibold mb-6 border-b pb-2">Skills</h2>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm list-disc list-inside">
+        <li>Angular, Ionic, RxJS</li>
+        <li>Playwright, Firebase, AWS</li>
+        <li>GraphQL, REST, WebSockets</li>
+        <li>Tailwind CSS, Angular Material</li>
+        <li>Directus CMS, Node.js</li>
+        <li>JavaScript, TypeScript, HTML5, CSS3</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2 class="text-xl font-semibold mb-6 border-b pb-2">Contact</h2>
+      <form action="#" method="POST" class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow">
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium">Name</label>
+          <input type="text" id="name" name="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-medium">Email</label>
+          <input type="email" id="email" name="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-medium">Message</label>
+          <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-white text-center py-4 shadow-inner mt-10">
+    <p class="text-sm">&copy; 2025 Abhishek Duhun. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

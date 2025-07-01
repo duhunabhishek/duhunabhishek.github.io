@@ -1059,11 +1059,13 @@
       themeIconEmoji.classList.add('animate-spin-slow');
       setTimeout(() => themeIconEmoji.classList.remove('animate-spin-slow'), 700);
     }
-    // Set theme on load
-    if (localStorage.getItem('theme') === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else if (localStorage.getItem('theme') === 'light') {
+    // Set theme on load - default to dark mode
+    if (localStorage.getItem('theme') === 'light') {
       document.documentElement.classList.remove('dark');
+    } else {
+      // Default to dark mode if no preference is set or if dark is selected
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     }
     themeIconEmoji.textContent = '🌓';
     themeToggle.addEventListener('click', () => {

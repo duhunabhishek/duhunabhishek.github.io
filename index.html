@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -64,8 +64,8 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       display: flex;
       justify-content: center;
@@ -74,17 +74,113 @@
       transition: opacity 0.5s ease-out;
     }
     
-    .loader {
-      width: 50px;
-      height: 50px;
-      border: 3px solid rgba(255,255,255,0.3);
-      border-radius: 50%;
-      border-top-color: #fff;
-      animation: spin 1s ease-in-out infinite;
+    .loader-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+    .loader {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.7rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      background: linear-gradient(90deg, #3b82f6, #a21caf, #22d3ee, #f59e42, #3b82f6);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 2px #3b82f6) drop-shadow(0 0 4px #a21caf);
+      height: 64px;
+      user-select: none;
+      animation: loader-gradient-move 2.5s linear infinite, loader-pulse 1.8s ease-in-out infinite;
+    }
+    
+    @keyframes loader-gradient-move {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    
+    @keyframes loader-pulse {
+      0%, 100% { filter: drop-shadow(0 0 2px #3b82f6) drop-shadow(0 0 4px #a21caf) brightness(1); }
+      50% { filter: drop-shadow(0 0 8px #3b82f6) drop-shadow(0 0 16px #a21caf) brightness(1.15); }
+    }
+    
+    .animate-loader-float {
+      animation: loader-float 3.5s ease-in-out infinite;
+    }
+    
+    @keyframes loader-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    
+    .loader-char {
+      display: inline-block;
+      opacity: 0.92;
+      text-shadow: 0 0 2px #3b82f6, 0 0 4px #a21caf;
+    }
+    
+    .loader-angle {
+      animation: loader-bounce-angle 1.4s infinite cubic-bezier(0.4,0,0.2,1);
+    }
+    
+    .loader-slash {
+      animation: loader-bounce-slash 1.4s infinite cubic-bezier(0.4,0,0.2,1);
+    }
+    
+    .loader-char:nth-child(1) {
+      animation-delay: 0s;
+    }
+    
+    .loader-char:nth-child(2) {
+      animation-delay: 0.18s;
+    }
+    
+    .loader-char:nth-child(3) {
+      animation-delay: 0.36s;
+    }
+    
+    @keyframes loader-bounce-angle {
+      0%, 100% { transform: scale(1) rotate(-10deg); filter: brightness(1); }
+      20% { transform: scale(1.2) rotate(-20deg); filter: brightness(1.2); }
+      40% { transform: scale(1.1) rotate(-10deg); filter: brightness(1.1); }
+      60% { transform: scale(1.2) rotate(-20deg); filter: brightness(1.2); }
+      80% { transform: scale(1) rotate(-10deg); filter: brightness(1); }
+    }
+    
+    @keyframes loader-bounce-slash {
+      0%, 100% { transform: scale(1) rotate(0deg); filter: brightness(1); }
+      20% { transform: scale(1.3) rotate(10deg); filter: brightness(1.3); }
+      40% { transform: scale(1.1) rotate(-10deg); filter: brightness(1.1); }
+      60% { transform: scale(1.3) rotate(10deg); filter: brightness(1.3); }
+      80% { transform: scale(1) rotate(0deg); filter: brightness(1); }
+    }
+    
+    .loader-cursor {
+      display: inline-block;
+      width: 0.5em;
+      margin-left: 0.1em;
+      color: #fff;
+      opacity: 0.85;
+      animation: loader-cursor-blink 0.7s steps(1) infinite, loader-cursor-type 2.1s steps(1) infinite;
+      font-weight: 400;
+      font-size: 0.9em;
+      vertical-align: middle;
+    }
+    
+    @keyframes loader-cursor-blink {
+      0%, 100% { opacity: 0.85; }
+      50% { opacity: 0.1; }
+    }
+    
+    @keyframes loader-cursor-type {
+      0%, 80%, 100% { opacity: 0.85; }
+      10%, 70% { opacity: 0.1; }
     }
     
     .hero-gradient {
@@ -176,8 +272,8 @@
     }
     
     @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: #3b82f6 }
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
     
     .sidebar-link {
@@ -306,14 +402,32 @@
             margin-bottom: 1rem;
           }
         }
+
+    :root {
+      /* Loader customization variables */
+      --loader-size: 56px;
+      --loader-ring-width: 6px;
+      --loader-color: #3b82f6; /* Tailwind blue-500 */
+      --loader-bg: rgba(255,255,255,0.15);
+    }
+
+    @keyframes spin-slow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .animate-spin-slow {
+      animation: spin-slow 0.7s cubic-bezier(0.4,0,0.2,1);
+      display: inline-block;
+      will-change: transform;
+      transform-origin: 50% 50%;
+    }
   </style>
 </head>
-<body class="bg-gray-900 text-gray-100 overflow-x-hidden">
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
   <!-- Loading Screen -->
-  <div id="loading" class="loading-screen">
-    <div class="text-center">
-      <div class="loader mb-4"></div>
-      <div class="text-white text-xl">Loading Experience...</div>
+  <div id="loading" class="loading-screen" role="status" aria-label="Loading">
+    <div class="loader-container">
+      <div class="loader mb-6 animate-loader-float" aria-hidden="true">
+        <span class="loader-char loader-angle">&lt;</span><span class="loader-char loader-slash">/</span><span class="loader-char loader-angle">&gt;</span><span class="loader-cursor">|</span>
+      </div>
+      <div id="loadingText" class="text-white text-xl opacity-0 translate-y-4 transition-all duration-700">Initializing portfolio...</div>
     </div>
   </div>
   
@@ -322,7 +436,7 @@
   
   <div class="flex relative z-10">
     <!-- Advanced Sidebar -->
-    <aside class="hidden lg:flex flex-col w-72 h-screen sticky top-0 glass-effect p-6 space-y-6">
+    <aside class="hidden lg:flex flex-col w-72 h-screen sticky top-0 glass-effect p-6 space-y-6 bg-gray-100 dark:bg-transparent" aria-label="Sidebar">
       <div class="text-center">
         <div class="w-20 h-20 rounded-full mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-2xl font-bold animate-glow">
           AD
@@ -331,14 +445,14 @@
         <p class="text-sm text-blue-400">Angular Specialist</p>
       </div>
       
-      <nav class="flex flex-col space-y-2">
-        <a href="#hero" class="sidebar-link block">🏠 Home</a>
-        <a href="#about" class="sidebar-link block">👨‍💻 About</a>
-        <a href="#projects" class="sidebar-link block">🚀 Projects</a>
-        <a href="#skills" class="sidebar-link block">⚡ Skills</a>
-        <a href="#experience" class="sidebar-link block">💼 Experience</a>
-        <a href="#testimonials" class="sidebar-link block">💬 Testimonials</a>
-        <a href="#contact" class="sidebar-link block">📧 Contact</a>
+      <nav class="flex flex-col space-y-2" aria-label="Main Navigation">
+        <a href="#hero" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="Home">🏠 <span>Home</span></a>
+        <a href="#about" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="About">👨‍💻 <span>About</span></a>
+        <a href="#projects" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="Projects">🚀 <span>Projects</span></a>
+        <a href="#skills" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="Skills">⚡ <span>Skills</span></a>
+        <a href="#experience" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="Experience">💼 <span>Experience</span></a>
+        <a href="#testimonials" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="Testimonials">💬 <span>Testimonials</span></a>
+        <a href="#contact" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="Contact">📧 <span>Contact</span></a>
       </nav>
       
       <div class="mt-auto space-y-4">
@@ -347,8 +461,9 @@
           <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:scale-110 transition-transform">🐱</a>
           <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:scale-110 transition-transform">💼</a>
         </div>
-        <button id="themeToggle" class="w-full p-3 glass-effect rounded-lg hover:bg-white/10 transition">
-          🌓 Toggle Theme
+        <button id="themeToggle" class="w-full p-3 glass-effect rounded-lg flex items-center justify-center gap-2 hover:bg-white/10 dark:hover:bg-gray-800/20 transition relative group text-2xl" aria-label="Toggle Theme">
+          <span id="themeIconEmoji" class="transition-transform duration-300">🌓</span>
+          <span class="font-semibold text-gray-700 dark:text-gray-200 transition-colors text-base">Toggle Theme</span>
         </button>
       </div>
     </aside>
@@ -356,22 +471,21 @@
     <!-- Main Content -->
     <main class="flex-1 relative">
       <!-- Hero Section with 3D Background -->
-      <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden">
+      <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden bg-white dark:bg-gray-900">
         <div id="three-container"></div>
         
         <div class="relative z-10 space-y-8 animate-slide-up px-6">
           <div class="floating-element">
             <h2 class="text-7xl font-black hero-gradient mb-4">
-              Hi, I'm Abhishek
+              <span id="typewriter-head" class="inline-block"></span><span id="typewriter-cursor" class="inline-block text-blue-400 text-5xl align-middle" style="opacity:1;">|</span>
             </h2>
-            <div class="typing-animation text-2xl text-gray-300 mb-6">
-              Angular Developer • 2+ Years Experience
+            <div class="text-2xl text-gray-300 mb-6">
+              <span id="typewriter-sub" class="inline-block"></span><span id="typewriter-cursor-sub" class="inline-block text-blue-400 text-2xl align-middle" style="opacity:1;">|</span>
             </div>
           </div>
           
           <p class="text-xl max-w-2xl mx-auto text-gray-400 leading-relaxed">
-            Crafting exceptional web experiences with Angular, TypeScript, and modern frameworks. 
-            Specialized in enterprise logistics solutions and scalable applications.
+            Transforming complex ideas into elegant, high-impact web applications using Angular, TypeScript, and cutting-edge frameworks. Focused on enterprise logistics and scalable digital solutions.
           </p>
           
           <div class="flex flex-wrap justify-center gap-4 mt-8">
@@ -391,18 +505,16 @@
       </section>
 
       <!-- About Section -->
-      <section id="about" class="py-32 px-6 relative">
+      <section id="about" class="py-32 px-6 relative bg-gray-50 dark:bg-gray-800">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-5xl font-bold text-center mb-16 text-glow">About Me</h2>
           <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div class="space-y-6">
               <p class="text-lg text-gray-300 leading-relaxed">
-                I'm a passionate Angular developer with 2+ years of experience building robust, scalable web applications. 
-                My expertise lies in creating seamless user experiences while maintaining clean, efficient code.
+                Experienced Angular developer with over 2 years of delivering robust, scalable web applications. Dedicated to building seamless user experiences with a focus on clean, maintainable code and modern best practices.
               </p>
               <p class="text-lg text-gray-300 leading-relaxed">
-                I specialize in enterprise logistics solutions, multilingual applications, and modern web technologies 
-                including Angular 19, Ionic 8, and TypeScript.
+                Specialized in enterprise logistics platforms, multilingual solutions, and the latest web technologies—including Angular 19, Ionic 8, and TypeScript—to drive innovation and efficiency for businesses.
               </p>
               <div class="grid grid-cols-2 gap-4 pt-6">
                 <div class="text-center p-4 glass-effect rounded-lg">
@@ -425,7 +537,7 @@
       </section>
 
       <!-- Projects Section -->
-     <section id="projects" class="py-32 px-6 bg-gray-800/50">
+     <section id="projects" class="py-32 px-6 bg-gray-100 dark:bg-gray-800/50">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-5xl font-bold text-center mb-16 text-glow">Featured Projects</h2>
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -438,27 +550,35 @@
                   Government
                 </div>
               </div>
-              <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-400 transition">FCI Supply Chain App</h3>
-              <p class="text-gray-400 mb-4 text-sm">
+              <h3 class="text-2xl font-bold mb-2 group-hover:text-blue-400 transition">FCI Supply Chain App</h3>
+              <div class="mb-2 flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400">
+                <span class="font-semibold">Role:</span> Lead Frontend Developer
+              </div>
+              <p class="text-gray-400 mb-2 text-sm">
                 <span class="text-blue-300 font-semibold">Food Corporation of India</span>
               </p>
-              <p class="text-gray-400 mb-6">
-                Multi-role logistics system supporting DSM, RO, Driver, and Transporter workflows with GPS validation, stock tracking, dispatch inspection, and EPOD integration.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
+              <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Ionic 8</span>
                 <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Angular 19</span>
                 <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Angular Material</span>
                 <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Directus</span>
+                <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">GraphQL</span>
               </div>
+              <ul class="mb-4 pl-5 list-disc text-gray-300 text-sm space-y-1">
+                <li>Multi-role logistics workflows (DSM, RO, Driver, Transporter)</li>
+                <li>Real-time GPS validation and stock tracking</li>
+                <li>GraphQL-powered data queries for efficient updates</li>
+                <li>Dispatch inspection and EPOD integration</li>
+              </ul>
+              <div class="mb-4 text-green-400 text-xs font-semibold">Impact: Improved delivery accuracy and reduced manual errors</div>
               <div class="flex space-x-4">
                 <a href="#" class="flex-1 text-center py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition">View Details</a>
                 <a href="#" class="flex-1 text-center py-2 glass-effect rounded-lg hover:bg-white/10 transition">Case Study</a>
               </div>
             </div>
 
-            <!-- Project 2: Synco Suite B2B Platform -->
-            <div class="project-card rounded-xl p-6 group">
+            <!-- Project 2: Synco Suite B2B Platform (Expanded) -->
+            <div class="project-card rounded-xl p-6 group flex flex-col h-full justify-between">
               <div class="w-full h-48 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-6 flex items-center justify-center text-4xl relative overflow-hidden">
                 <div class="absolute inset-0 bg-black/20"></div>
                 <span class="relative z-10">📦</span>
@@ -466,20 +586,27 @@
                   Enterprise
                 </div>
               </div>
-              <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-400 transition">Synco Suite — B2B Logistics</h3>
-              <p class="text-gray-400 mb-4 text-sm">
+              <h3 class="text-2xl font-bold mb-2 group-hover:text-blue-400 transition">Synco Suite — B2B Logistics</h3>
+              <div class="mb-2 flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400">
+                <span class="font-semibold">Role:</span> Angular Developer
+              </div>
+              <p class="text-gray-400 mb-2 text-sm">
                 <span class="text-green-300 font-semibold">Delhi Police, Jubilant FoodWorks, Cabt Logistics, Petpooja, Udaan</span>
               </p>
-              <p class="text-gray-400 mb-6">
-                Comprehensive logistics automation platform with live GPS tracking, geofenced attendance, and route optimization. Reduced delivery errors by 30% through improved UX.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
+              <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Angular</span>
                 <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">Firebase</span>
                 <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Leaflet</span>
                 <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">REST API</span>
               </div>
-              <div class="flex space-x-4">
+              <ul class="mb-4 pl-5 list-disc text-gray-300 text-sm space-y-1">
+                <li>Comprehensive logistics automation platform</li>
+                <li>Live GPS tracking and geofenced attendance</li>
+                <li>Route optimization and delivery error reduction</li>
+                <li>Multi-client support and scalable architecture</li>
+              </ul>
+              <div class="mb-4 text-green-400 text-xs font-semibold">Impact: Reduced delivery errors by 30% through improved UX</div>
+              <div class="flex space-x-4 pt-4 mt-auto">
                 <a href="#" class="flex-1 text-center py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition">Live Demo</a>
                 <a href="#" class="flex-1 text-center py-2 glass-effect rounded-lg hover:bg-white/10 transition">Portfolio</a>
               </div>
@@ -494,20 +621,28 @@
                   Corporate
                 </div>
               </div>
-              <h3 class="text-2xl font-bold mb-4 group-hover:text-blue-400 transition">Smart Mobility Yellow App</h3>
-              <p class="text-gray-400 mb-4 text-sm">
+              <h3 class="text-2xl font-bold mb-2 group-hover:text-blue-400 transition">Smart Mobility Yellow App</h3>
+              <div class="mb-2 flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400">
+                <span class="font-semibold">Role:</span> Frontend Engineer
+              </div>
+              <p class="text-gray-400 mb-2 text-sm">
                 <span class="text-purple-300 font-semibold">Vodafone Idea Ltd - Internal Corporate Platform</span>
               </p>
-              <p class="text-gray-400 mb-6">
-                Real-time office commute app with driver assignments, shift scheduling, and live tracking. Reduced manual coordination by 20% and improved workforce mobility punctuality.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-6">
+              <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Ionic</span>
                 <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Angular</span>
                 <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">Firebase</span>
                 <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">GPS APIs</span>
                 <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">WebSockets</span>
+                <span class="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm">GraphQL</span>
               </div>
+              <ul class="mb-4 pl-5 list-disc text-gray-300 text-sm space-y-1">
+                <li>Real-time office commute management</li>
+                <li>Shift scheduling and live tracking</li>
+                <li>GraphQL APIs for scalable data management</li>
+                <li>Driver assignments and notifications</li>
+              </ul>
+              <div class="mb-4 text-green-400 text-xs font-semibold">Impact: Reduced manual coordination by 20%, improved punctuality</div>
               <div class="flex space-x-4">
                 <a href="#" class="flex-1 text-center py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition">Overview</a>
                 <a href="#" class="flex-1 text-center py-2 glass-effect rounded-lg hover:bg-white/10 transition">Impact</a>
@@ -517,7 +652,7 @@
         </div>
       </section>
       <!-- Skills Section -->
-    <section id="skills" class="py-32 px-6">
+    <section id="skills" class="py-32 px-6 bg-white dark:bg-gray-900">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-5xl font-bold text-center mb-16 text-glow">Technical Skills</h2>
           
@@ -710,27 +845,18 @@
 
 
       <!-- Experience Timeline -->
-      <section id="experience" class="py-32 px-6 bg-gray-800/50">
+      <section id="experience" class="py-32 px-6 bg-gray-100 dark:bg-gray-800/50">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-5xl font-bold text-center mb-16 text-glow">Experience</h2>
           <div class="space-y-12">
             <div class="flex items-start space-x-6 group">
               <div class="w-4 h-4 bg-blue-500 rounded-full mt-2 group-hover:scale-150 transition-transform"></div>
               <div class="flex-1 glass-effect p-6 rounded-lg">
-                <h3 class="text-xl font-bold text-blue-400">Senior Angular Developer</h3>
-                <p class="text-gray-400 mb-2">TechCorp Solutions • 2023 - Present</p>
+                <h3 class="text-xl font-bold text-blue-400"> Angular Developer</h3>
+                <p class="text-gray-400 mb-2">RoadCast Tech Solutions Private Ltd • 2023 - Present</p>
                 <p class="text-gray-300">
                   Leading development of enterprise logistics applications, mentoring junior developers, 
                   and implementing modern Angular practices. Reduced application load times by 40%.
-                </p>
-              </div>
-            </div>
-            <div class="flex items-start space-x-6 group">
-              <div class="w-4 h-4 bg-green-500 rounded-full mt-2 group-hover:scale-150 transition-transform"></div>
-              <div class="flex-1 glass-effect p-6 rounded-lg">
-                <h3 class="text-xl font-bold text-green-400">Frontend Developer</h3>
-                <p class="text-gray-400 mb-2">StartupXYZ • 2022 - 2023</p>
-                <p class="text-gray-300">
                   Developed responsive web applications using Angular and Ionic. 
                   Collaborated with UX/UI teams to implement pixel-perfect designs and smooth animations.
                 </p>
@@ -741,7 +867,7 @@
       </section>
 
       <!-- Testimonials -->
-      <section id="testimonials" class="py-32 px-6">
+      <section id="testimonials" class="py-32 px-6 bg-white dark:bg-gray-900">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-5xl font-bold text-center mb-16 text-glow">What Clients Say</h2>
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -787,7 +913,7 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="py-32 px-6 bg-gray-800/50">
+      <section id="contact" class="py-32 px-6 bg-gray-100 dark:bg-gray-800/50">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-5xl font-bold text-center mb-16 text-glow">Get In Touch</h2>
           <div class="text-center mb-12">
@@ -853,7 +979,7 @@
       </section>
 
       <!-- Footer -->
-      <footer class="py-12 px-6 border-t border-gray-800">
+      <footer class="py-12 px-6 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
         <div class="max-w-6xl mx-auto text-center">
           <div class="flex justify-center space-x-6 mb-8">
             <a href="#" class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center hover:scale-110 transition-transform">
@@ -926,10 +1052,28 @@
       });
     });
 
-    // Theme Toggle
+    // Theme Toggle (emoji version)
     const themeToggle = document.getElementById('themeToggle');
+    const themeIconEmoji = document.getElementById('themeIconEmoji');
+    function animateThemeIcon() {
+      themeIconEmoji.classList.add('animate-spin-slow');
+      setTimeout(() => themeIconEmoji.classList.remove('animate-spin-slow'), 700);
+    }
+    // Set theme on load
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.remove('dark');
+    }
+    themeIconEmoji.textContent = '🌓';
     themeToggle.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
+      if (document.documentElement.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+      animateThemeIcon();
     });
 
     // Smooth Scrolling
@@ -1113,6 +1257,46 @@
       }
     `;
     document.head.appendChild(style);
+
+    // Typewriter effect for hero headline and subtitle
+    function typeWriterEffect(elementId, cursorId, text, speed, callback) {
+      const el = document.getElementById(elementId);
+      const cursor = document.getElementById(cursorId);
+      let i = 0;
+      function type() {
+        if (i < text.length) {
+          el.textContent += text.charAt(i);
+          i++;
+          setTimeout(type, speed);
+        } else {
+          cursor.style.animation = 'none';
+          cursor.style.display = 'none';
+          if (callback) callback();
+        }
+      }
+      el.textContent = '';
+      cursor.style.opacity = 1;
+      cursor.style.display = '';
+      cursor.style.animation = 'none';
+      type();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      typeWriterEffect('typewriter-head', 'typewriter-cursor', "Hi, I'm Abhishek", 70, () => {
+        typeWriterEffect('typewriter-sub', 'typewriter-cursor-sub', 'Angular Developer • 2+ Years Experience', 40);
+      });
+    });
+
+    // Animate loading text fade-in-up
+    window.addEventListener('DOMContentLoaded', () => {
+      const loadingText = document.getElementById('loadingText');
+      if (loadingText) {
+        setTimeout(() => {
+          loadingText.classList.remove('opacity-0', 'translate-y-4');
+          loadingText.classList.add('opacity-100', 'translate-y-0');
+        }, 300);
+      }
+    });
   </script>
 </body>
 </html>

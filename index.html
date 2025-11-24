@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <!-- Primary Meta Tags -->
-  <title>Abhishek Duhun | Frontend Developer | Angular • TypeScript • Ionic Specialist</title>
+  <title>Abhishek Duhun | Senior Frontend Developer | Enterprise Angular & TypeScript Specialist</title>
   <meta name="title" content="Abhishek Duhun | Frontend Developer | Angular • TypeScript • Ionic Specialist" />
-  <meta name="description" content="Experienced Frontend Developer specializing in Angular, Ionic, TypeScript, Tailwind CSS, Node.js, Directus, and AWS. Building scalable enterprise applications with 2+ years of expertise. " />
-  <meta name="keywords" content="Frontend Developer, Angular Developer, TypeScript Developer, Ionic Developer, Web Developer, Angular, TypeScript, Ionic, Tailwind CSS, Node.js, Directus, AWS, Hire Frontend Developer, Portfolio" />
+  <meta name="description"
+    content="Experienced Frontend Developer specializing in Angular, Ionic, TypeScript, Tailwind CSS, Node.js, Directus, and AWS. Building scalable enterprise applications with 2+ years of expertise. " />
+  <meta name="keywords"
+    content="Frontend Developer, Angular Developer, TypeScript Developer, Ionic Developer, Web Developer, Angular, TypeScript, Ionic, Tailwind CSS, Node.js, Directus, AWS, Hire Frontend Developer, Portfolio" />
   <meta name="author" content="Abhishek Duhun" />
   <meta name="robots" content="index, follow" />
   <meta name="language" content="English" />
   <meta name="revisit-after" content="7 days" />
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://duhunabhishek.github.io/" />
   <meta property="og:title" content="Abhishek Duhun | Frontend Developer | Angular • TypeScript • Ionic" />
-  <meta property="og:description" content="Experienced Frontend Developer specializing in Angular, Ionic, TypeScript, and modern web technologies. Building scalable enterprise applications." />
+  <meta property="og:description"
+    content="Experienced Frontend Developer specializing in Angular, Ionic, TypeScript, and modern web technologies. Building scalable enterprise applications." />
   <meta property="og:image" content="https://duhunabhishek.github.io/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Abhishek Duhun Portfolio" />
   <meta property="og:locale" content="en_US" />
-  
+
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://duhunabhishek.github.io/" />
   <meta property="twitter:title" content="Abhishek Duhun | Frontend Developer | Angular • TypeScript • Ionic" />
-  <meta property="twitter:description" content="Experienced Frontend Developer specializing in Angular, Ionic, TypeScript, and modern web technologies." />
+  <meta property="twitter:description"
+    content="Experienced Frontend Developer specializing in Angular, Ionic, TypeScript, and modern web technologies." />
   <meta property="twitter:image" content="https://duhunabhishek.github.io/og-image.jpg" />
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  
+
   <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
-  
+
   <!-- Structured Data (JSON-LD) for SEO -->
   <script type="application/ld+json">
   {
@@ -68,13 +73,13 @@
     }
   }
   </script>
-  
+
   <!-- External Resources -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
-      theme: { 
+      theme: {
         extend: {
           animation: {
             'float': 'float 6s ease-in-out infinite',
@@ -129,22 +134,22 @@
       }
     }
   </script>
-  
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-    
+
     :root {
       --loader-size: 56px;
       --loader-ring-width: 6px;
       --loader-color: #3b82f6;
-      --loader-bg: rgba(255,255,255,0.15);
+      --loader-bg: rgba(255, 255, 255, 0.15);
     }
-    
-    * { 
+
+    * {
       font-family: 'Inter', sans-serif;
       box-sizing: border-box;
     }
-    
+
     /* Professional Loading Screen */
     .loading-screen {
       position: fixed;
@@ -161,12 +166,19 @@
       z-index: 9999;
       transition: opacity 0.6s ease-out;
     }
-    
+
     @keyframes gradient-shift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
     }
-    
+
     .loader-container {
       display: flex;
       flex-direction: column;
@@ -174,14 +186,14 @@
       justify-content: center;
       gap: 2rem;
     }
-    
+
     /* Professional Spinner */
     .professional-spinner {
       width: 80px;
       height: 80px;
       position: relative;
     }
-    
+
     .spinner-ring {
       position: absolute;
       width: 100%;
@@ -192,7 +204,7 @@
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
-    
+
     .spinner-ring:nth-child(2) {
       width: 70%;
       height: 70%;
@@ -202,7 +214,7 @@
       border-right-color: #22d3ee;
       animation: spin 1.2s linear infinite reverse;
     }
-    
+
     .spinner-ring:nth-child(3) {
       width: 40%;
       height: 40%;
@@ -212,12 +224,17 @@
       border-right-color: #10b981;
       animation: spin 0.8s linear infinite;
     }
-    
+
     @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
-    
+
     /* Logo in center */
     .loader-logo {
       position: absolute;
@@ -237,18 +254,21 @@
       box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
       animation: logo-pulse 2s ease-in-out infinite;
     }
-    
+
     @keyframes logo-pulse {
-      0%, 100% { 
+
+      0%,
+      100% {
         transform: translate(-50%, -50%) scale(1);
         box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
       }
-      50% { 
+
+      50% {
         transform: translate(-50%, -50%) scale(1.1);
         box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
       }
     }
-    
+
     /* Loading Text */
     .loader-text {
       font-size: 1.5rem;
@@ -261,12 +281,19 @@
       animation: text-gradient 3s ease infinite;
       letter-spacing: 0.05em;
     }
-    
+
     @keyframes text-gradient {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
     }
-    
+
     /* Progress Bar */
     .loader-progress {
       width: 200px;
@@ -276,7 +303,7 @@
       overflow: hidden;
       position: relative;
     }
-    
+
     .loader-progress-bar {
       height: 100%;
       background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
@@ -285,25 +312,40 @@
       animation: progress-load 2s ease-in-out infinite, progress-gradient 2s ease infinite;
       width: 0%;
     }
-    
+
     @keyframes progress-load {
-      0% { width: 0%; }
-      50% { width: 70%; }
-      100% { width: 100%; }
+      0% {
+        width: 0%;
+      }
+
+      50% {
+        width: 70%;
+      }
+
+      100% {
+        width: 100%;
+      }
     }
-    
+
     @keyframes progress-gradient {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
     }
-    
+
     /* Loading Dots */
     .loader-dots {
       display: flex;
       gap: 8px;
       margin-top: 1rem;
     }
-    
+
     .loader-dot {
       width: 8px;
       height: 8px;
@@ -311,22 +353,34 @@
       background: #3b82f6;
       animation: dot-bounce 1.4s ease-in-out infinite;
     }
-    
-    .loader-dot:nth-child(1) { animation-delay: 0s; }
-    .loader-dot:nth-child(2) { animation-delay: 0.2s; }
-    .loader-dot:nth-child(3) { animation-delay: 0.4s; }
-    
+
+    .loader-dot:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .loader-dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .loader-dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
     @keyframes dot-bounce {
-      0%, 80%, 100% { 
+
+      0%,
+      80%,
+      100% {
         transform: translateY(0);
         opacity: 0.5;
       }
-      40% { 
+
+      40% {
         transform: translateY(-12px);
         opacity: 1;
       }
     }
-    
+
     /* Hero & Premium Effects */
     .hero-gradient {
       background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab, #ee7752);
@@ -336,11 +390,11 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    
+
     .text-glow {
       text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
     }
-    
+
     .glass-effect {
       background: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(10px);
@@ -348,13 +402,13 @@
       border: 1px solid rgba(0, 0, 0, 0.1);
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
-    
+
     .dark .glass-effect {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
       box-shadow: none;
     }
-    
+
     /* Premium Gradient Border Effect */
     .gradient-border {
       position: relative;
@@ -364,7 +418,7 @@
       border-radius: 1rem;
       padding: 1.5rem;
     }
-    
+
     .gradient-border::before {
       content: '';
       position: absolute;
@@ -381,11 +435,11 @@
       opacity: 0;
       transition: opacity 0.3s ease;
     }
-    
+
     .gradient-border:hover::before {
       opacity: 1;
     }
-    
+
     .project-card {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
       backdrop-filter: blur(10px);
@@ -396,13 +450,13 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .dark .project-card {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
       border: 1px solid rgba(255, 255, 255, 0.1);
       box-shadow: none;
     }
-    
+
     .project-card::before {
       content: '';
       position: absolute;
@@ -413,22 +467,22 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
       transition: left 0.5s ease;
     }
-    
+
     .project-card:hover::before {
       left: 100%;
     }
-    
+
     .project-card:hover {
       transform: translateY(-8px) scale(1.02);
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(59, 130, 246, 0.3);
       border-color: rgba(59, 130, 246, 0.4);
     }
-    
+
     .dark .project-card:hover {
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.2);
       border-color: rgba(59, 130, 246, 0.3);
     }
-    
+
     .skill-orb {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
       backdrop-filter: blur(10px);
@@ -439,24 +493,24 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .dark .skill-orb {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
       border: 1px solid rgba(255, 255, 255, 0.1);
       box-shadow: none;
     }
-    
+
     .skill-orb:hover {
       transform: translateY(-8px) scale(1.05);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(59, 130, 246, 0.3);
       border-color: rgba(59, 130, 246, 0.4);
     }
-    
+
     .dark .skill-orb:hover {
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.2);
       border-color: rgba(255, 255, 255, 0.3);
     }
-    
+
     .skill-orb::before {
       content: '';
       position: absolute;
@@ -467,15 +521,15 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
       transition: left 0.5s ease;
     }
-    
+
     .skill-orb:hover::before {
       left: 100%;
     }
-    
+
     .skill-category {
       position: relative;
     }
-    
+
     .skill-category::after {
       content: '';
       position: absolute;
@@ -487,24 +541,38 @@
       background: linear-gradient(90deg, transparent, currentColor, transparent);
       opacity: 0.3;
     }
-    
+
     .floating-element {
       animation: float 6s ease-in-out infinite;
     }
-    
+
     .morphing-blob {
       border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
       animation: morph 8s ease-in-out infinite;
     }
-    
+
     @keyframes morph {
-      0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-      25% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
-      50% { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
-      75% { border-radius: 30% 70% 30% 70% / 70% 30% 70% 30%; }
-      100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+      0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      }
+
+      25% {
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+      }
+
+      50% {
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+      }
+
+      75% {
+        border-radius: 30% 70% 30% 70% / 70% 30% 70% 30%;
+      }
+
+      100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      }
     }
-    
+
     #three-container {
       position: absolute;
       top: 0;
@@ -514,7 +582,7 @@
       z-index: -1;
       pointer-events: none;
     }
-    
+
     .sidebar-link {
       position: relative;
       padding: 12px 16px;
@@ -522,7 +590,7 @@
       transition: all 0.3s ease;
       overflow: hidden;
     }
-    
+
     .sidebar-link::before {
       content: '';
       position: absolute;
@@ -533,22 +601,22 @@
       background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.2), transparent);
       transition: left 0.5s ease;
     }
-    
+
     .sidebar-link:hover::before {
       left: 100%;
     }
-    
+
     .sidebar-link:hover {
       background: rgba(59, 130, 246, 0.1);
       transform: translateX(5px);
     }
-    
+
     /* Button Ripple Effect */
     .btn-ripple {
       position: relative;
       overflow: hidden;
     }
-    
+
     .btn-ripple::after {
       content: '';
       position: absolute;
@@ -561,29 +629,41 @@
       transform: translate(-50%, -50%);
       transition: width 0.6s, height 0.6s;
     }
-    
+
     .btn-ripple:active::after {
       width: 300px;
       height: 300px;
     }
-    
-    @keyframes spin-slow { 
-      0% { transform: rotate(0deg); } 
-      100% { transform: rotate(360deg); } 
+
+    @keyframes spin-slow {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
-    
+
     .animate-spin-slow {
-      animation: spin-slow 0.7s cubic-bezier(0.4,0,0.2,1);
+      animation: spin-slow 0.7s cubic-bezier(0.4, 0, 0.2, 1);
       display: inline-block;
       will-change: transform;
       transform-origin: 50% 50%;
     }
-    
+
     @keyframes fadeOut {
-      0% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(0); }
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(0);
+      }
     }
-    
+
     /* Premium CTA Button */
     .cta-button {
       position: relative;
@@ -593,7 +673,7 @@
       transition: all 0.3s ease;
       overflow: hidden;
     }
-    
+
     .cta-button::before {
       content: '';
       position: absolute;
@@ -604,56 +684,57 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
       transition: left 0.5s ease;
     }
-    
+
     .cta-button:hover::before {
       left: 100%;
     }
-    
+
     .cta-button:hover {
       transform: translateY(-2px) scale(1.05);
       box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
     }
-    
+
     /* Parallax Container */
     .parallax-container {
       will-change: transform;
     }
-    
+
     /* Scroll Fade In */
     .fade-in-up {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
-    
+
     .fade-in-up.visible {
       opacity: 1;
       transform: translateY(0);
     }
-    
+
     /* Mobile Optimizations */
     @media (max-width: 768px) {
       .skill-orb {
         padding: 1rem;
       }
-      
+
       .skill-orb .text-4xl {
         font-size: 2rem;
         margin-bottom: 0.5rem;
       }
-      
+
       .skill-orb .text-5xl {
         font-size: 2.5rem;
         margin-bottom: 1rem;
       }
-      
+
       .hero-gradient {
         font-size: 3rem !important;
       }
     }
-    
+
     /* Reduced motion preference */
     @media (prefers-reduced-motion: reduce) {
+
       *,
       *::before,
       *::after {
@@ -662,7 +743,7 @@
         transition-duration: 0.01ms !important;
       }
     }
-    
+
     /* Light mode body background */
     body {
       background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
@@ -670,28 +751,29 @@
       font-family: 'Inter', sans-serif;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-    
+
     .dark body {
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: #f9fafb;
     }
-    
+
     /* Premium background mesh */
     .bg-mesh {
-      background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.05) 0px, transparent 50%), 
-                        radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.05) 0px, transparent 50%), 
-                        radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.05) 0px, transparent 50%), 
-                        radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.05) 0px, transparent 50%);
+      background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.05) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.05) 0px, transparent 50%);
     }
-    
+
     .dark .bg-mesh {
-      background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.2) 0px, transparent 50%), 
-                        radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.2) 0px, transparent 50%), 
-                        radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.2) 0px, transparent 50%), 
-                        radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.2) 0px, transparent 50%);
+      background-image: radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.2) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.2) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.2) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.2) 0px, transparent 50%);
     }
   </style>
 </head>
+
 <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
   <!-- Professional Loading Screen -->
   <div id="loading" class="loading-screen" role="status" aria-label="Loading" aria-live="polite">
@@ -703,15 +785,15 @@
         <div class="spinner-ring"></div>
         <div class="loader-logo">AD</div>
       </div>
-      
+
       <!-- Loading Text -->
       <div class="loader-text">Abhishek Duhun</div>
-      
+
       <!-- Progress Bar -->
       <div class="loader-progress">
         <div class="loader-progress-bar"></div>
       </div>
-      
+
       <!-- Loading Dots -->
       <div class="loader-dots">
         <div class="loader-dot"></div>
@@ -720,37 +802,63 @@
       </div>
     </div>
   </div>
-  
+
   <!-- Floating Particles Background -->
   <div id="particles" class="fixed inset-0 z-0" aria-hidden="true"></div>
-  
+
   <div class="flex relative z-10">
     <!-- Advanced Sidebar -->
-    <aside class="hidden lg:flex flex-col w-72 h-screen sticky top-0 glass-effect p-6 space-y-6 bg-white/80 dark:bg-transparent" aria-label="Sidebar">
+    <aside
+      class="hidden lg:flex flex-col w-72 h-screen sticky top-0 glass-effect p-6 space-y-6 bg-white/80 dark:bg-transparent"
+      aria-label="Sidebar">
       <div class="text-center">
-        <div class="w-20 h-20 rounded-full mx-auto mb-4 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 flex items-center justify-center text-2xl font-bold animate-glow shadow-lg">
+        <div
+          class="w-20 h-20 rounded-full mx-auto mb-4 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 flex items-center justify-center text-2xl font-bold animate-glow shadow-lg">
           AD
         </div>
         <h1 class="text-2xl font-bold text-gray-800 dark:text-white text-glow">Abhishek Duhun</h1>
         <p class="text-sm text-blue-600 dark:text-blue-300 font-medium">Frontend Developer</p>
       </div>
-      
+
       <nav class="flex flex-col space-y-2" aria-label="Main Navigation">
-        <a href="#hero" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="Home">🏠 <span>Home</span></a>
-        <a href="#about" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="About">👨‍💻 <span>About</span></a>
-        <a href="#projects" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="Projects">🚀 <span>Projects</span></a>
-        <a href="#skills" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="Skills">⚡ <span>Skills</span></a>
-        <a href="#experience" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="Experience">💼 <span>Experience</span></a>
-        <a href="#contact" class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10" aria-label="Contact">📧 <span>Contact</span></a>
+        <a href="#hero"
+          class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10"
+          aria-label="Home">🏠 <span>Home</span></a>
+        <a href="#about"
+          class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10"
+          aria-label="About">👨‍💻 <span>About</span></a>
+        <a href="#projects"
+          class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10"
+          aria-label="Projects">🚀 <span>Projects</span></a>
+        <a href="#skills"
+          class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10"
+          aria-label="Skills">⚡ <span>Skills</span></a>
+        <a href="#experience"
+          class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10"
+          aria-label="Experience">💼 <span>Experience</span></a>
+        <a href="#achievements"
+          class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10"
+          aria-label="Achievements">🏆 <span>Achievements</span></a>
+        <a href="#contact"
+          class="sidebar-link block text-gray-900 dark:text-gray-100 hover:bg-blue-100 dark:hover:bg-white/10"
+          aria-label="Contact">📧 <span>Contact</span></a>
       </nav>
-      
+
       <div class="mt-auto space-y-4">
         <div class="flex justify-center space-x-4">
-            <a href="mailto:aryan.duhun04@gmail.com" class="w-10 h-10 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center hover:scale-110 transition-transform shadow-lg" aria-label="Email" title="Email">📧</a>
-          <a href="https://github.com/duhunabhishek" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-700 dark:bg-gray-600 flex items-center justify-center hover:scale-110 transition-transform shadow-lg" aria-label="GitHub" title="GitHub">🐱</a>
-          <a href="https://www.linkedin.com/in/abhishek-duhun-81b34a25a/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-blue-800 dark:bg-blue-700 flex items-center justify-center hover:scale-110 transition-transform shadow-lg" aria-label="LinkedIn" title="LinkedIn">💼</a>
+          <a href="mailto:aryan.duhun04@gmail.com"
+            class="w-10 h-10 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+            aria-label="Email" title="Email">📧</a>
+          <a href="https://github.com/duhunabhishek" target="_blank" rel="noopener noreferrer"
+            class="w-10 h-10 rounded-full bg-gray-700 dark:bg-gray-600 flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+            aria-label="GitHub" title="GitHub">🐱</a>
+          <a href="https://www.linkedin.com/in/abhishek-duhun-81b34a25a/" target="_blank" rel="noopener noreferrer"
+            class="w-10 h-10 rounded-full bg-blue-800 dark:bg-blue-700 flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+            aria-label="LinkedIn" title="LinkedIn">💼</a>
         </div>
-        <button id="themeToggle" class="w-full p-3 glass-effect rounded-lg flex items-center justify-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800/20 transition relative group text-2xl" aria-label="Toggle Theme" aria-pressed="false">
+        <button id="themeToggle"
+          class="w-full p-3 glass-effect rounded-lg flex items-center justify-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800/20 transition relative group text-2xl"
+          aria-label="Toggle Theme" aria-pressed="false">
           <span id="themeIconEmoji" class="transition-transform duration-300" aria-hidden="true">🌓</span>
           <span class="font-semibold text-gray-800 dark:text-gray-200 transition-colors text-base">Toggle Theme</span>
         </button>
@@ -760,35 +868,44 @@
     <!-- Main Content -->
     <main class="flex-1 relative">
       <!-- Hero Section with Premium Design -->
-      <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden bg-white dark:bg-gray-900 bg-mesh">
+      <section id="hero"
+        class="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden bg-white dark:bg-gray-900 bg-mesh">
         <div id="three-container" aria-hidden="true"></div>
-        
+
         <div class="relative z-10 space-y-8 animate-slide-up px-6 max-w-5xl mx-auto">
           <div class="floating-element fade-in-up">
             <h1 class="text-7xl md:text-8xl font-black hero-gradient mb-4 leading-tight">
-              <span id="typewriter-head" class="inline-block"></span><span id="typewriter-cursor" class="inline-block text-blue-600 dark:text-blue-400 text-5xl align-middle" style="opacity:1;">|</span>
+              <span id="typewriter-head" class="inline-block"></span><span id="typewriter-cursor"
+                class="inline-block text-blue-600 dark:text-blue-400 text-5xl align-middle" style="opacity:1;">|</span>
             </h1>
             <div class="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6 font-medium">
-              <span id="typewriter-sub" class="inline-block"></span><span id="typewriter-cursor-sub" class="inline-block text-blue-500 dark:text-blue-400 text-2xl align-middle" style="opacity:1;">|</span>
+              <span id="typewriter-sub" class="inline-block"></span><span id="typewriter-cursor-sub"
+                class="inline-block text-blue-500 dark:text-blue-400 text-2xl align-middle" style="opacity:1;">|</span>
             </div>
           </div>
-          
+
           <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-600 dark:text-gray-300 leading-relaxed fade-in-up">
-            Crafting elegant, high-impact web applications with <span class="font-semibold text-blue-600 dark:text-blue-400">Angular</span>, <span class="font-semibold text-purple-600 dark:text-purple-400">TypeScript</span>, and modern frameworks. Specializing in enterprise logistics and scalable digital solutions that drive business growth.
+            Crafting elegant, high-impact web applications with <span
+              class="font-semibold text-blue-600 dark:text-blue-400">Angular</span>, <span
+              class="font-semibold text-purple-600 dark:text-purple-400">TypeScript</span>, and modern frameworks.
+            Specializing in enterprise logistics and scalable digital solutions that drive business growth.
           </p>
-          
+
           <div class="flex flex-wrap justify-center gap-4 mt-12 fade-in-up">
-            <a href="#contact" class="cta-button px-10 py-5 rounded-full text-white font-bold text-lg shadow-2xl btn-ripple relative">
+            <a href="#contact"
+              class="cta-button px-10 py-5 rounded-full text-white font-bold text-lg shadow-2xl btn-ripple relative">
               <span class="relative z-10">✨ Let's Collaborate</span>
             </a>
-            <a href="#projects" class="px-10 py-5 glass-effect rounded-full hover:bg-blue-50 dark:hover:bg-white/10 transition-all transform hover:scale-105 border-2 border-blue-500/50 dark:border-blue-500/30 font-semibold text-lg text-gray-800 dark:text-white">
+            <a href="#projects"
+              class="px-10 py-5 glass-effect rounded-full hover:bg-blue-50 dark:hover:bg-white/10 transition-all transform hover:scale-105 border-2 border-blue-500/50 dark:border-blue-500/30 font-semibold text-lg text-gray-800 dark:text-white">
               Explore Projects
             </a>
-            <a href="resume.pdf" download class="px-10 py-5 glass-effect rounded-full hover:bg-purple-50 dark:hover:bg-white/10 transition-all transform hover:scale-105 border-2 border-purple-500/50 dark:border-purple-500/30 font-semibold text-lg text-gray-800 dark:text-white">
+            <a href="resume.pdf" download
+              class="px-10 py-5 glass-effect rounded-full hover:bg-purple-50 dark:hover:bg-white/10 transition-all transform hover:scale-105 border-2 border-purple-500/50 dark:border-purple-500/30 font-semibold text-lg text-gray-800 dark:text-white">
               📄 View Resume
             </a>
           </div>
-          
+
           <!-- Quick Stats -->
           <div class="grid grid-cols-3 gap-6 mt-16 max-w-2xl mx-auto fade-in-up">
             <div class="text-center p-4 glass-effect rounded-xl">
@@ -805,26 +922,46 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Floating geometric shapes -->
-        <div class="absolute top-20 left-20 w-20 h-20 bg-blue-500/20 rounded-full morphing-blob" aria-hidden="true"></div>
-        <div class="absolute bottom-20 right-20 w-32 h-32 bg-purple-500/20 rounded-lg floating-element rotate-45" aria-hidden="true"></div>
-        <div class="absolute top-1/2 left-10 w-16 h-16 bg-green-500/20 rounded-full animate-bounce-gentle" aria-hidden="true"></div>
+        <div class="absolute top-20 left-20 w-20 h-20 bg-blue-500/20 rounded-full morphing-blob" aria-hidden="true">
+        </div>
+        <div class="absolute bottom-20 right-20 w-32 h-32 bg-purple-500/20 rounded-lg floating-element rotate-45"
+          aria-hidden="true"></div>
+        <div class="absolute top-1/2 left-10 w-16 h-16 bg-green-500/20 rounded-full animate-bounce-gentle"
+          aria-hidden="true"></div>
       </section>
 
       <!-- About Section -->
       <section id="about" class="py-32 px-6 relative bg-gray-50/50 dark:bg-gray-800 bg-mesh">
         <div class="max-w-6xl mx-auto">
           <h2 class="text-5xl md:text-6xl font-bold text-center mb-4 text-glow fade-in-up">About Me</h2>
-          <p class="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg fade-in-up">Building solutions that scale, perform, and inspire</p>
+          <p class="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg fade-in-up">Transforming complex business
+            challenges into elegant digital solutions</p>
           <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div class="space-y-6 fade-in-up">
               <p class="text-lg md:text-xl text-gray-700 dark:text-gray-200 leading-relaxed">
-                Experienced <strong class="text-blue-600 dark:text-blue-400">Frontend Developer</strong> with over 2 years of delivering robust, scalable web applications. Dedicated to building seamless user experiences with a focus on clean, maintainable code and modern best practices.
+                I'm a <strong class="text-blue-600 dark:text-blue-400">Senior Frontend Developer</strong> with 2+ years
+                of specialized experience building enterprise-grade logistics and supply chain management platforms. My
+                expertise lies in architecting scalable, high-performance web applications that serve thousands of daily
+                users across government and corporate sectors.
               </p>
               <p class="text-lg md:text-xl text-gray-700 dark:text-gray-200 leading-relaxed">
-                Specialized in enterprise logistics platforms, multilingual solutions, and the latest web technologies—including <strong class="text-purple-600 dark:text-purple-400">Angular 19</strong>, <strong class="text-pink-600 dark:text-pink-400">Ionic 8</strong>, and <strong class="text-blue-600 dark:text-blue-400">TypeScript</strong>—to drive innovation and efficiency for businesses.
+                Currently at <strong class="text-purple-600 dark:text-purple-400">RoadCast Tech Solutions</strong>, I
+                lead frontend development for mission-critical applications including the <strong>Food Corporation of
+                  India's</strong> nationwide supply chain system and multi-tenant B2B logistics platforms serving
+                clients like <strong>Delhi Police</strong>, <strong>Jubilant FoodWorks</strong>, and <strong>Vodafone
+                  Idea</strong>.
               </p>
+              <p class="text-lg md:text-xl text-gray-700 dark:text-gray-200 leading-relaxed">
+                My technical stack centers on <strong class="text-red-600 dark:text-red-400">Angular 19</strong>,
+                <strong class="text-pink-600 dark:text-pink-400">Ionic 8</strong>, and <strong
+                  class="text-blue-600 dark:text-blue-400">TypeScript</strong>, with deep expertise in state management
+                (NgRx, RxJS), GraphQL, and performance optimization. I'm passionate about writing clean, maintainable
+                code and mentoring junior developers in modern web development best practices.
+              </p>
+
+              <!-- Key Highlights -->
               <div class="grid grid-cols-2 gap-4 pt-6">
                 <div class="text-center p-6 glass-effect rounded-xl hover:scale-105 transition-transform">
                   <div class="text-4xl font-bold text-blue-600 dark:text-blue-400">2+</div>
@@ -832,12 +969,21 @@
                 </div>
                 <div class="text-center p-6 glass-effect rounded-xl hover:scale-105 transition-transform">
                   <div class="text-4xl font-bold text-green-600 dark:text-green-400">15+</div>
-                  <div class="text-sm text-gray-600 dark:text-gray-300 mt-2">Projects Completed</div>
+                  <div class="text-sm text-gray-600 dark:text-gray-300 mt-2">Projects Delivered</div>
+                </div>
+                <div class="text-center p-6 glass-effect rounded-xl hover:scale-105 transition-transform">
+                  <div class="text-4xl font-bold text-purple-600 dark:text-purple-400">35K+</div>
+                  <div class="text-sm text-gray-600 dark:text-gray-300 mt-2">Daily Active Users</div>
+                </div>
+                <div class="text-center p-6 glass-effect rounded-xl hover:scale-105 transition-transform">
+                  <div class="text-4xl font-bold text-orange-600 dark:text-orange-400">5+</div>
+                  <div class="text-sm text-gray-600 dark:text-gray-300 mt-2">Enterprise Clients</div>
                 </div>
               </div>
             </div>
             <div class="relative fade-in-up">
-              <div class="w-80 h-80 mx-auto bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full floating-element flex items-center justify-center shadow-2xl">
+              <div
+                class="w-80 h-80 mx-auto bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full floating-element flex items-center justify-center shadow-2xl">
                 <div class="text-8xl" aria-hidden="true">👨‍💻</div>
               </div>
             </div>
@@ -845,117 +991,339 @@
         </div>
       </section>
 
-      <!-- Projects Section -->
+      <!-- Projects Section with Detailed Case Studies -->
       <section id="projects" class="py-32 px-6 bg-gray-100/50 dark:bg-gray-800/50 bg-mesh">
         <div class="max-w-7xl mx-auto">
-          <h2 class="text-5xl md:text-6xl font-bold text-center mb-4 text-glow fade-in-up">Featured Projects</h2>
-          <p class="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg fade-in-up">Real-world solutions that drive measurable impact</p>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 1: FCI Supply Chain App -->
-            <article class="project-card rounded-xl p-6 group fade-in-up">
-              <div class="w-full h-48 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg mb-6 flex items-center justify-center text-4xl relative overflow-hidden">
-                <div class="absolute inset-0 bg-black/20"></div>
-                <span class="relative z-10" aria-hidden="true">🚛</span>
-                <div class="absolute top-2 right-2 bg-green-500/80 text-white text-xs px-2 py-1 rounded-full font-semibold">
-                  Government
+          <h2 class="text-5xl md:text-6xl font-bold text-center mb-4 text-glow fade-in-up">Featured Case Studies</h2>
+          <p class="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg fade-in-up">Enterprise solutions
+            delivering measurable business impact</p>
+
+          <div class="space-y-12">
+            <!-- Project 1: FCI Supply Chain App - Detailed Case Study -->
+            <article class="project-card rounded-2xl p-8 group fade-in-up">
+              <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                  <div
+                    class="w-full h-64 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl mb-6 flex items-center justify-center text-6xl relative overflow-hidden shadow-2xl">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <span class="relative z-10" aria-hidden="true">🚛</span>
+                    <div
+                      class="absolute top-4 right-4 bg-green-500 text-white text-xs px-3 py-2 rounded-full font-bold shadow-lg">
+                      Government Project
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 rounded-full text-xs font-medium">Ionic
+                      8</span>
+                    <span
+                      class="px-3 py-1 bg-red-100 dark:bg-red-500/20 text-red-700 dark:text-red-400 rounded-full text-xs font-medium">Angular
+                      19</span>
+                    <span
+                      class="px-3 py-1 bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-400 rounded-full text-xs font-medium">Material
+                      UI</span>
+                    <span
+                      class="px-3 py-1 bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-400 rounded-full text-xs font-medium">Directus</span>
+                    <span
+                      class="px-3 py-1 bg-pink-100 dark:bg-pink-500/20 text-pink-700 dark:text-pink-400 rounded-full text-xs font-medium">GraphQL</span>
+                  </div>
+                </div>
+
+                <div class="lg:col-span-2 space-y-6">
+                  <div>
+                    <h3 class="text-3xl font-bold mb-2 text-gray-800 dark:text-white">FCI Supply Chain Management System
+                    </h3>
+                    <p class="text-blue-600 dark:text-blue-400 font-semibold mb-1">Food Corporation of India</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Role: <span
+                        class="font-semibold text-gray-800 dark:text-white">Lead Frontend Developer</span></p>
+                  </div>
+
+                  <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg border-l-4 border-orange-500">
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-2 flex items-center gap-2">
+                      <span class="text-orange-500">🎯</span> Problem Statement
+                    </h4>
+                    <p class="text-gray-700 dark:text-gray-200 text-sm">
+                      FCI needed a comprehensive digital solution to manage complex multi-stakeholder logistics
+                      operations across India, replacing manual processes that caused delays, errors, and lack of
+                      real-time visibility in food grain distribution.
+                    </p>
+                  </div>
+
+                  <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border-l-4 border-blue-500">
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-2 flex items-center gap-2">
+                      <span class="text-blue-500">💡</span> Solution & Technical Approach
+                    </h4>
+                    <ul class="text-gray-700 dark:text-gray-200 text-sm space-y-2">
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>Multi-role Architecture:</strong> Designed and implemented role-based workflows
+                          for DSM, RO, Drivers, and Transporters with Angular's lazy-loaded modules for optimal
+                          performance</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>Real-time GPS Integration:</strong> Built live tracking system with geofencing
+                          validation using Ionic's native GPS APIs and WebSocket connections</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>GraphQL Data Layer:</strong> Implemented efficient data fetching with Apollo
+                          Client, reducing API calls by 60% through intelligent query batching</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>Offline-First Design:</strong> Developed PWA capabilities with IndexedDB for
+                          seamless operation in low-connectivity areas</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border-l-4 border-green-500">
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
+                      <span class="text-green-500">📊</span> Measurable Impact
+                    </h4>
+                    <div class="grid grid-cols-2 gap-4">
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-green-600 dark:text-green-400">85%</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Reduction in manual errors</div>
+                      </div>
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">40%</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Faster dispatch processing</div>
+                      </div>
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">100%</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Real-time visibility</div>
+                      </div>
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-orange-600 dark:text-orange-400">10K+</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Daily active users</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition text-gray-800 dark:text-white">FCI Supply Chain App</h3>
-              <div class="mb-2 flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-400">
-                <span class="font-semibold">Role:</span> Lead Frontend Developer
-              </div>
-              <p class="text-gray-600 dark:text-gray-300 mb-2 text-sm">
-                <span class="text-blue-600 dark:text-blue-300 font-semibold">Food Corporation of India</span>
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 rounded-full text-sm font-medium">Ionic 8</span>
-                <span class="px-3 py-1 bg-red-100 dark:bg-red-500/20 text-red-700 dark:text-red-400 rounded-full text-sm font-medium">Angular 19</span>
-                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-400 rounded-full text-sm font-medium">Angular Material</span>
-                <span class="px-3 py-1 bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-400 rounded-full text-sm font-medium">Directus</span>
-                <span class="px-3 py-1 bg-pink-100 dark:bg-pink-500/20 text-pink-700 dark:text-pink-400 rounded-full text-sm font-medium">GraphQL</span>
-              </div>
-              <ul class="mb-4 pl-5 list-disc text-gray-700 dark:text-gray-200 text-sm space-y-1">
-                <li>Multi-role logistics workflows (DSM, RO, Driver, Transporter)</li>
-                <li>Real-time GPS validation and stock tracking</li>
-                <li>GraphQL-powered data queries for efficient updates</li>
-                <li>Dispatch inspection and EPOD integration</li>
-              </ul>
-              <div class="mb-4 text-green-600 dark:text-green-400 text-xs font-semibold">Impact: Improved delivery accuracy and reduced manual errors</div>
             </article>
 
-            <!-- Project 2: Synco Suite B2B Platform -->
-            <article class="project-card rounded-xl p-6 group flex flex-col h-full justify-between fade-in-up">
-              <div class="w-full h-48 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-6 flex items-center justify-center text-4xl relative overflow-hidden">
-                <div class="absolute inset-0 bg-black/20"></div>
-                <span class="relative z-10" aria-hidden="true">📦</span>
-                <div class="absolute top-2 right-2 bg-orange-500/80 text-white text-xs px-2 py-1 rounded-full font-semibold">
-                  Enterprise
+            <!-- Project 2: Synco Suite - Detailed Case Study -->
+            <article class="project-card rounded-2xl p-8 group fade-in-up">
+              <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                  <div
+                    class="w-full h-64 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl mb-6 flex items-center justify-center text-6xl relative overflow-hidden shadow-2xl">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <span class="relative z-10" aria-hidden="true">📦</span>
+                    <div
+                      class="absolute top-4 right-4 bg-orange-500 text-white text-xs px-3 py-2 rounded-full font-bold shadow-lg">
+                      Enterprise B2B
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1 bg-red-100 dark:bg-red-500/20 text-red-700 dark:text-red-400 rounded-full text-xs font-medium">Angular</span>
+                    <span
+                      class="px-3 py-1 bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400 rounded-full text-xs font-medium">Firebase</span>
+                    <span
+                      class="px-3 py-1 bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-400 rounded-full text-xs font-medium">Leaflet.js</span>
+                    <span
+                      class="px-3 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 rounded-full text-xs font-medium">REST
+                      API</span>
+                    <span
+                      class="px-3 py-1 bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-400 rounded-full text-xs font-medium">RxJS</span>
+                  </div>
+                </div>
+
+                <div class="lg:col-span-2 space-y-6">
+                  <div>
+                    <h3 class="text-3xl font-bold mb-2 text-gray-800 dark:text-white">Synco Suite — B2B Logistics
+                      Platform</h3>
+                    <p class="text-green-600 dark:text-green-400 font-semibold mb-1">Delhi Police • Jubilant FoodWorks •
+                      Cabt Logistics • Petpooja • Udaan</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Role: <span
+                        class="font-semibold text-gray-800 dark:text-white">Senior Angular Developer</span></p>
+                  </div>
+
+                  <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg border-l-4 border-orange-500">
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-2 flex items-center gap-2">
+                      <span class="text-orange-500">🎯</span> Problem Statement
+                    </h4>
+                    <p class="text-gray-700 dark:text-gray-200 text-sm">
+                      Multiple enterprise clients needed a unified, scalable logistics automation platform to manage
+                      complex delivery operations, reduce errors, and provide real-time visibility across diverse
+                      business verticals from food delivery to government operations.
+                    </p>
+                  </div>
+
+                  <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border-l-4 border-blue-500">
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-2 flex items-center gap-2">
+                      <span class="text-blue-500">💡</span> Solution & Technical Approach
+                    </h4>
+                    <ul class="text-gray-700 dark:text-gray-200 text-sm space-y-2">
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>Multi-tenant Architecture:</strong> Built scalable white-label solution supporting
+                          5+ major clients with customizable branding and workflows</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>Advanced Mapping:</strong> Integrated Leaflet.js with custom clustering algorithms
+                          for efficient visualization of 1000+ daily routes</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>Reactive State Management:</strong> Implemented RxJS-based state management
+                          reducing UI lag by 70% during high-frequency updates</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>Geofenced Attendance:</strong> Developed location-based attendance system with
+                          99.5% accuracy using Firebase Realtime Database</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border-l-4 border-green-500">
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
+                      <span class="text-green-500">📊</span> Measurable Impact
+                    </h4>
+                    <div class="grid grid-cols-2 gap-4">
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-green-600 dark:text-green-400">30%</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Reduction in delivery errors</div>
+                      </div>
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">50%</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Faster route optimization</div>
+                      </div>
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">5+</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Enterprise clients</div>
+                      </div>
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-orange-600 dark:text-orange-400">25K+</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Deliveries tracked daily</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition text-gray-800 dark:text-white">Synco Suite — B2B Logistics</h3>
-              <div class="mb-2 flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-400">
-                <span class="font-semibold">Role:</span> Angular Developer
-              </div>
-              <p class="text-gray-600 dark:text-gray-300 mb-2 text-sm">
-                <span class="text-green-600 dark:text-green-300 font-semibold">Delhi Police, Jubilant FoodWorks, Cabt Logistics, Petpooja, Udaan</span>
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-red-100 dark:bg-red-500/20 text-red-700 dark:text-red-400 rounded-full text-sm font-medium">Angular</span>
-                <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400 rounded-full text-sm font-medium">Firebase</span>
-                <span class="px-3 py-1 bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-400 rounded-full text-sm font-medium">Leaflet</span>
-                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 rounded-full text-sm font-medium">REST API</span>
-              </div>
-              <ul class="mb-4 pl-5 list-disc text-gray-700 dark:text-gray-200 text-sm space-y-1">
-                <li>Comprehensive logistics automation platform</li>
-                <li>Live GPS tracking and geofenced attendance</li>
-                <li>Route optimization and delivery error reduction</li>
-                <li>Multi-client support and scalable architecture</li>
-              </ul>
-              <div class="mb-4 text-green-400 text-xs font-semibold">Impact: Reduced delivery errors by 30% through improved UX</div>
             </article>
 
-            <!-- Project 3: Smart Mobility Yellow App -->
-            <article class="project-card rounded-xl p-6 group fade-in-up">
-              <div class="w-full h-48 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-6 flex items-center justify-center text-4xl relative overflow-hidden">
-                <div class="absolute inset-0 bg-black/20"></div>
-                <span class="relative z-10" aria-hidden="true">🚌</span>
-                <div class="absolute top-2 right-2 bg-purple-500/80 text-white text-xs px-2 py-1 rounded-full font-semibold">
-                  Corporate
+            <!-- Project 3: Smart Mobility - Detailed Case Study -->
+            <article class="project-card rounded-2xl p-8 group fade-in-up">
+              <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                  <div
+                    class="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl mb-6 flex items-center justify-center text-6xl relative overflow-hidden shadow-2xl">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                    <span class="relative z-10" aria-hidden="true">🚌</span>
+                    <div
+                      class="absolute top-4 right-4 bg-purple-500 text-white text-xs px-3 py-2 rounded-full font-bold shadow-lg">
+                      Corporate Platform
+                    </div>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="px-3 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 rounded-full text-xs font-medium">Ionic</span>
+                    <span
+                      class="px-3 py-1 bg-red-100 dark:bg-red-500/20 text-red-700 dark:text-red-400 rounded-full text-xs font-medium">Angular</span>
+                    <span
+                      class="px-3 py-1 bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400 rounded-full text-xs font-medium">Firebase</span>
+                    <span
+                      class="px-3 py-1 bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-400 rounded-full text-xs font-medium">GPS
+                      APIs</span>
+                    <span
+                      class="px-3 py-1 bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-400 rounded-full text-xs font-medium">WebSockets</span>
+                    <span
+                      class="px-3 py-1 bg-pink-100 dark:bg-pink-500/20 text-pink-700 dark:text-pink-400 rounded-full text-xs font-medium">GraphQL</span>
+                  </div>
+                </div>
+
+                <div class="lg:col-span-2 space-y-6">
+                  <div>
+                    <h3 class="text-3xl font-bold mb-2 text-gray-800 dark:text-white">Smart Mobility Yellow App</h3>
+                    <p class="text-purple-600 dark:text-purple-400 font-semibold mb-1">Vodafone Idea Ltd — Internal
+                      Corporate Platform</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Role: <span
+                        class="font-semibold text-gray-800 dark:text-white">Frontend Engineer</span></p>
+                  </div>
+
+                  <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg border-l-4 border-orange-500">
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-2 flex items-center gap-2">
+                      <span class="text-orange-500">🎯</span> Problem Statement
+                    </h4>
+                    <p class="text-gray-700 dark:text-gray-200 text-sm">
+                      Vodafone Idea needed to streamline employee commute operations across multiple office locations,
+                      eliminating manual coordination, improving punctuality, and providing real-time visibility for
+                      5000+ employees.
+                    </p>
+                  </div>
+
+                  <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border-l-4 border-blue-500">
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-2 flex items-center gap-2">
+                      <span class="text-blue-500">💡</span> Solution & Technical Approach
+                    </h4>
+                    <ul class="text-gray-700 dark:text-gray-200 text-sm space-y-2">
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>Cross-platform Mobile App:</strong> Developed hybrid Ionic/Angular app for iOS and
+                          Android with 95% code reuse</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>Real-time Tracking:</strong> Implemented WebSocket-based live tracking with
+                          automatic ETA calculations and push notifications</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>Smart Scheduling:</strong> Built intelligent shift-based routing algorithm
+                          optimizing pickup sequences for 50+ routes</span>
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span class="text-blue-500 mt-1">•</span>
+                        <span><strong>GraphQL Integration:</strong> Designed efficient data layer reducing mobile data
+                          usage by 45% through selective field queries</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border-l-4 border-green-500">
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
+                      <span class="text-green-500">📊</span> Measurable Impact
+                    </h4>
+                    <div class="grid grid-cols-2 gap-4">
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-green-600 dark:text-green-400">20%</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Less manual coordination</div>
+                      </div>
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">35%</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Improved punctuality</div>
+                      </div>
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">5000+</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">Active employees</div>
+                      </div>
+                      <div class="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
+                        <div class="text-2xl font-bold text-orange-600 dark:text-orange-400">99.8%</div>
+                        <div class="text-xs text-gray-600 dark:text-gray-400">App uptime</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <h3 class="text-2xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition text-gray-800 dark:text-white">Smart Mobility Yellow App</h3>
-              <div class="mb-2 flex flex-wrap gap-2 text-xs text-gray-600 dark:text-gray-400">
-                <span class="font-semibold">Role:</span> Frontend Engineer
-              </div>
-              <p class="text-gray-600 dark:text-gray-300 mb-2 text-sm">
-                <span class="text-purple-600 dark:text-purple-300 font-semibold">Vodafone Idea Ltd - Internal Corporate Platform</span>
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-400 rounded-full text-sm font-medium">Ionic</span>
-                <span class="px-3 py-1 bg-red-100 dark:bg-red-500/20 text-red-700 dark:text-red-400 rounded-full text-sm font-medium">Angular</span>
-                <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400 rounded-full text-sm font-medium">Firebase</span>
-                <span class="px-3 py-1 bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-400 rounded-full text-sm font-medium">GPS APIs</span>
-                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-400 rounded-full text-sm font-medium">WebSockets</span>
-                <span class="px-3 py-1 bg-pink-100 dark:bg-pink-500/20 text-pink-700 dark:text-pink-400 rounded-full text-sm font-medium">GraphQL</span>
-              </div>
-              <ul class="mb-4 pl-5 list-disc text-gray-700 dark:text-gray-200 text-sm space-y-1">
-                <li>Real-time office commute management</li>
-                <li>Shift scheduling and live tracking</li>
-                <li>GraphQL APIs for scalable data management</li>
-                <li>Driver assignments and notifications</li>
-              </ul>
-              <div class="mb-4 text-green-400 text-xs font-semibold">Impact: Reduced manual coordination by 20%, improved punctuality</div>
             </article>
           </div>
         </div>
       </section>
-      
+
       <!-- Skills Section -->
       <section id="skills" class="py-32 px-6 bg-white dark:bg-gray-900 bg-mesh">
         <div class="max-w-7xl mx-auto">
           <h2 class="text-5xl md:text-6xl font-bold text-center mb-4 text-glow fade-in-up">Technical Skills</h2>
-          <p class="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg fade-in-up">A comprehensive toolkit for modern web development</p>
-          
+          <p class="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg fade-in-up">A comprehensive toolkit for
+            modern web development</p>
+
           <div class="space-y-16">
             <!-- Languages & Backend -->
             <div class="skill-category fade-in-up">
@@ -1095,7 +1463,8 @@
 
             <!-- Concepts & Architectures -->
             <div class="skill-category fade-in-up">
-              <h3 class="text-2xl font-bold mb-8 text-center text-purple-600 dark:text-purple-400">Concepts & Architectures</h3>
+              <h3 class="text-2xl font-bold mb-8 text-center text-purple-600 dark:text-purple-400">Concepts &
+                Architectures</h3>
               <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="skill-orb rounded-2xl p-8 text-center group">
                   <div class="text-5xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true">📱</div>
@@ -1117,7 +1486,8 @@
 
             <!-- Protocols -->
             <div class="skill-category fade-in-up">
-              <h3 class="text-2xl font-bold mb-8 text-center text-cyan-600 dark:text-cyan-400">Protocols & Communication</h3>
+              <h3 class="text-2xl font-bold mb-8 text-center text-cyan-600 dark:text-cyan-400">Protocols & Communication
+              </h3>
               <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="skill-orb rounded-2xl p-8 text-center group">
                   <div class="text-5xl mb-6 group-hover:scale-110 transition-transform" aria-hidden="true">🌐</div>
@@ -1144,17 +1514,20 @@
       <section id="experience" class="py-32 px-6 bg-gray-100/50 dark:bg-gray-800/50 bg-mesh">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-5xl md:text-6xl font-bold text-center mb-4 text-glow fade-in-up">Experience</h2>
-          <p class="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg fade-in-up">Driving innovation through proven expertise</p>
+          <p class="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg fade-in-up">Driving innovation through
+            proven expertise</p>
           <div class="space-y-12">
             <article class="flex items-start space-x-6 group fade-in-up">
-              <div class="w-4 h-4 bg-blue-500 rounded-full mt-2 group-hover:scale-150 transition-transform" aria-hidden="true"></div>
+              <div class="w-4 h-4 bg-blue-500 rounded-full mt-2 group-hover:scale-150 transition-transform"
+                aria-hidden="true"></div>
               <div class="flex-1 glass-effect p-6 rounded-lg hover:scale-105 transition-transform">
                 <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400">Angular Developer</h3>
-                <p class="text-gray-600 dark:text-gray-300 mb-2">RoadCast Tech Solutions Private Ltd • 2023 - Present</p>
+                <p class="text-gray-600 dark:text-gray-300 mb-2">RoadCast Tech Solutions Private Ltd • 2023 - Present
+                </p>
                 <p class="text-gray-700 dark:text-gray-200">
-                  Leading development of enterprise logistics applications, mentoring junior developers, 
+                  Leading development of enterprise logistics applications, mentoring junior developers,
                   and implementing modern Angular practices. Reduced application load times by 40%.
-                  Developed responsive web applications using Angular and Ionic. 
+                  Developed responsive web applications using Angular and Ionic.
                   Collaborated with UX/UI teams to implement pixel-perfect designs and smooth animations.
                 </p>
               </div>
@@ -1163,16 +1536,153 @@
         </div>
       </section>
 
+      <!-- Achievements & Certifications Section -->
+      <section id="achievements" class="py-32 px-6 bg-white dark:bg-gray-900 bg-mesh">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-5xl md:text-6xl font-bold text-center mb-4 text-glow fade-in-up">Achievements & Recognition
+          </h2>
+          <p class="text-center text-gray-600 dark:text-gray-300 mb-16 text-lg fade-in-up">Proven track record of
+            excellence and continuous learning</p>
+
+          <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <!-- Key Achievement 1 -->
+            <div class="glass-effect p-8 rounded-2xl hover:scale-105 transition-transform fade-in-up">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+                  🏆
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Performance Excellence Award</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">RoadCast Tech Solutions • 2024</p>
+                  <p class="text-gray-700 dark:text-gray-200 text-sm">
+                    Recognized for delivering the FCI Supply Chain project 2 weeks ahead of schedule while maintaining
+                    99.5% code quality score and reducing load times by 40%.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Achievement 2 -->
+            <div class="glass-effect p-8 rounded-2xl hover:scale-105 transition-transform fade-in-up">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+                  ⚡
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Technical Innovation Leader</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">RoadCast Tech Solutions • 2023-2024</p>
+                  <p class="text-gray-700 dark:text-gray-200 text-sm">
+                    Led migration to Angular 19 and introduced GraphQL, resulting in 60% reduction in API calls and 70%
+                    improvement in UI responsiveness across all projects.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Achievement 3 -->
+            <div class="glass-effect p-8 rounded-2xl hover:scale-105 transition-transform fade-in-up">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+                  👥
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Mentorship Impact</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">RoadCast Tech Solutions • 2023-Present</p>
+                  <p class="text-gray-700 dark:text-gray-200 text-sm">
+                    Mentored 5+ junior developers in Angular best practices, TypeScript patterns, and modern web
+                    development, improving team productivity by 25%.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Key Achievement 4 -->
+            <div class="glass-effect p-8 rounded-2xl hover:scale-105 transition-transform fade-in-up">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+                  📈
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Multi-Client Success</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Synco Suite Platform • 2023</p>
+                  <p class="text-gray-700 dark:text-gray-200 text-sm">
+                    Successfully deployed white-label logistics platform to 5+ enterprise clients including Delhi Police
+                    and Jubilant FoodWorks, managing 25K+ daily deliveries.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Certifications & Skills -->
+          <div class="fade-in-up">
+            <h3 class="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">Technical Expertise &
+              Certifications</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="glass-effect p-6 rounded-xl text-center hover:scale-105 transition-transform">
+                <div class="text-4xl mb-4">🎓</div>
+                <h4 class="font-bold text-gray-800 dark:text-white mb-2">Angular Expert</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400">3+ years of production experience with Angular
+                  12-19, including advanced patterns and optimization</p>
+              </div>
+
+              <div class="glass-effect p-6 rounded-xl text-center hover:scale-105 transition-transform">
+                <div class="text-4xl mb-4">💻</div>
+                <h4 class="font-bold text-gray-800 dark:text-white mb-2">TypeScript Specialist</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Advanced TypeScript patterns, generics, decorators,
+                  and type-safe architecture design</p>
+              </div>
+
+              <div class="glass-effect p-6 rounded-xl text-center hover:scale-105 transition-transform">
+                <div class="text-4xl mb-4">📱</div>
+                <h4 class="font-bold text-gray-800 dark:text-white mb-2">Cross-Platform Development</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Ionic 8 expert with PWA development and native
+                  mobile integration</p>
+              </div>
+
+              <div class="glass-effect p-6 rounded-xl text-center hover:scale-105 transition-transform">
+                <div class="text-4xl mb-4">☁️</div>
+                <h4 class="font-bold text-gray-800 dark:text-white mb-2">Cloud & DevOps</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400">AWS deployment, Docker containerization, and CI/CD
+                  pipeline implementation</p>
+              </div>
+
+              <div class="glass-effect p-6 rounded-xl text-center hover:scale-105 transition-transform">
+                <div class="text-4xl mb-4">🔄</div>
+                <h4 class="font-bold text-gray-800 dark:text-white mb-2">State Management</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400">NgRx, RxJS reactive programming, and complex state
+                  architecture</p>
+              </div>
+
+              <div class="glass-effect p-6 rounded-xl text-center hover:scale-105 transition-transform">
+                <div class="text-4xl mb-4">🎯</div>
+                <h4 class="font-bold text-gray-800 dark:text-white mb-2">Performance Optimization</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Lazy loading, change detection strategies, and
+                  bundle size optimization</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Contact Section -->
       <section id="contact" class="py-32 px-6 bg-gray-100/50 dark:bg-gray-800/50 bg-mesh">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-5xl md:text-6xl font-bold text-center mb-4 text-glow fade-in-up">Let's Connect</h2>
-          <p class="text-center text-gray-600 dark:text-gray-300 mb-4 text-lg fade-in-up">Interested in collaborating on your next project? Let's discuss how we can bring your vision to life.</p>
-          
+          <p class="text-center text-gray-600 dark:text-gray-300 mb-4 text-lg fade-in-up">Interested in collaborating on
+            your next project? Let's discuss how we can bring your vision to life.</p>
+
           <div class="grid md:grid-cols-2 gap-12">
             <div class="space-y-8 fade-in-up">
-              <a href="mailto:aryan.duhun04@gmail.com" class="flex items-center space-x-4 p-4 glass-effect rounded-lg group hover:bg-white/10 transition hover:scale-105">
-                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition shadow-lg" aria-hidden="true">
+              <a href="mailto:aryan.duhun04@gmail.com"
+                class="flex items-center space-x-4 p-4 glass-effect rounded-lg group hover:bg-white/10 transition hover:scale-105">
+                <div
+                  class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition shadow-lg"
+                  aria-hidden="true">
                   📧
                 </div>
                 <div>
@@ -1180,9 +1690,12 @@
                   <p class="text-gray-600 dark:text-gray-300">aryan.duhun04@gmail.com</p>
                 </div>
               </a>
-              
-              <a href="tel:+918527644647" class="flex items-center space-x-4 p-4 glass-effect rounded-lg group hover:bg-green-50 dark:hover:bg-white/10 transition hover:scale-105">
-                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition shadow-lg" aria-hidden="true">
+
+              <a href="tel:+918527644647"
+                class="flex items-center space-x-4 p-4 glass-effect rounded-lg group hover:bg-green-50 dark:hover:bg-white/10 transition hover:scale-105">
+                <div
+                  class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center group-hover:scale-110 transition shadow-lg"
+                  aria-hidden="true">
                   📱
                 </div>
                 <div>
@@ -1190,9 +1703,10 @@
                   <p class="text-gray-600 dark:text-gray-300">+91 85276 46447</p>
                 </div>
               </a>
-              
+
               <div class="flex items-center space-x-4 p-4 glass-effect rounded-lg group">
-                <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center shadow-lg" aria-hidden="true">
+                <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center shadow-lg"
+                  aria-hidden="true">
                   📍
                 </div>
                 <div>
@@ -1201,25 +1715,25 @@
                 </div>
               </div>
             </div>
-            
+
             <form id="contactForm" class="space-y-6 fade-in-up" novalidate>
               <div>
                 <label for="name" class="sr-only">Your Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required
-                       class="w-full p-4 glass-effect rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition">
+                  class="w-full p-4 glass-effect rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition">
               </div>
               <div>
                 <label for="email" class="sr-only">Your Email</label>
                 <input type="email" id="email" name="email" placeholder="Your Email" required
-                       class="w-full p-4 glass-effect rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition">
+                  class="w-full p-4 glass-effect rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition">
               </div>
               <div>
                 <label for="message" class="sr-only">Your Message</label>
                 <textarea id="message" name="message" rows="5" placeholder="Your Message" required
-                          class="w-full p-4 glass-effect rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 resize-none transition"></textarea>
+                  class="w-full p-4 glass-effect rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-transparent text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 resize-none transition"></textarea>
               </div>
-              <button type="submit" 
-                      class="w-full py-4 cta-button rounded-lg font-semibold text-white btn-ripple relative shadow-xl">
+              <button type="submit"
+                class="w-full py-4 cta-button rounded-lg font-semibold text-white btn-ripple relative shadow-xl">
                 <span class="relative z-10">Send Message</span>
               </button>
             </form>
@@ -1231,9 +1745,15 @@
       <footer class="py-12 px-6 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
         <div class="max-w-6xl mx-auto text-center">
           <div class="flex justify-center space-x-6 mb-8">
-            <a href="mailto:aryan.duhun04@gmail.com" class="w-12 h-12 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center hover:scale-110 transition-transform shadow-lg" aria-label="Email" title="Email">📧</a>
-            <a href="https://github.com/duhunabhishek" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-gray-700 dark:bg-gray-600 flex items-center justify-center hover:scale-110 transition-transform shadow-lg" aria-label="GitHub" title="GitHub">🐱</a>
-            <a href="https://www.linkedin.com/in/abhishek-duhun-81b34a25a/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-blue-800 dark:bg-blue-700 flex items-center justify-center hover:scale-110 transition-transform shadow-lg" aria-label="LinkedIn" title="LinkedIn">💼</a>
+            <a href="mailto:aryan.duhun04@gmail.com"
+              class="w-12 h-12 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+              aria-label="Email" title="Email">📧</a>
+            <a href="https://github.com/duhunabhishek" target="_blank" rel="noopener noreferrer"
+              class="w-12 h-12 rounded-full bg-gray-700 dark:bg-gray-600 flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+              aria-label="GitHub" title="GitHub">🐱</a>
+            <a href="https://www.linkedin.com/in/abhishek-duhun-81b34a25a/" target="_blank" rel="noopener noreferrer"
+              class="w-12 h-12 rounded-full bg-blue-800 dark:bg-blue-700 flex items-center justify-center hover:scale-110 transition-transform shadow-lg"
+              aria-label="LinkedIn" title="LinkedIn">💼</a>
           </div>
           <p class="text-gray-600 dark:text-gray-300 mb-4">
             &copy; 2025 Abhishek Duhun. Crafted with ❤️ and lots of ☕
@@ -1247,12 +1767,15 @@
   </div>
 
   <!-- Mobile Menu Toggle -->
-  <button id="mobileMenuToggle" class="lg:hidden fixed top-6 left-6 z-50 w-12 h-12 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform" aria-label="Toggle Mobile Menu" aria-expanded="false">
+  <button id="mobileMenuToggle"
+    class="lg:hidden fixed top-6 left-6 z-50 w-12 h-12 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform"
+    aria-label="Toggle Mobile Menu" aria-expanded="false">
     <span id="menuIcon">☰</span>
   </button>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="lg:hidden fixed inset-0 bg-gray-900/95 dark:bg-gray-950/95 backdrop-blur-sm z-40 transform -translate-x-full transition-transform duration-300">
+  <div id="mobileMenu"
+    class="lg:hidden fixed inset-0 bg-gray-900/95 dark:bg-gray-950/95 backdrop-blur-sm z-40 transform -translate-x-full transition-transform duration-300">
     <div class="p-6 pt-20">
       <nav class="flex flex-col space-y-4" aria-label="Mobile Navigation">
         <a href="#hero" class="sidebar-link block text-xl text-white">🏠 Home</a>
@@ -1260,10 +1783,13 @@
         <a href="#projects" class="sidebar-link block text-xl text-white">🚀 Projects</a>
         <a href="#skills" class="sidebar-link block text-xl text-white">⚡ Skills</a>
         <a href="#experience" class="sidebar-link block text-xl text-white">💼 Experience</a>
+        <a href="#achievements" class="sidebar-link block text-xl text-white">🏆 Achievements</a>
         <a href="#contact" class="sidebar-link block text-xl text-white">📧 Contact</a>
       </nav>
       <div class="mt-8">
-        <button id="mobileThemeToggle" class="w-full p-3 glass-effect rounded-lg flex items-center justify-center gap-2 text-white" aria-label="Toggle Theme">
+        <button id="mobileThemeToggle"
+          class="w-full p-3 glass-effect rounded-lg flex items-center justify-center gap-2 text-white"
+          aria-label="Toggle Theme">
           <span id="mobileThemeIcon">🌓</span>
           <span class="font-semibold">Toggle Theme</span>
         </button>
@@ -1275,17 +1801,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
-  
+
   <script>
     'use strict';
-    
+
     // ===== Theme Management =====
     class ThemeManager {
       constructor() {
         this.theme = this.getStoredTheme() || this.getSystemTheme();
         this.init();
       }
-      
+
       getStoredTheme() {
         try {
           return localStorage.getItem('theme');
@@ -1293,11 +1819,11 @@
           return null;
         }
       }
-      
+
       getSystemTheme() {
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       }
-      
+
       setTheme(theme) {
         this.theme = theme;
         document.documentElement.classList.toggle('dark', theme === 'dark');
@@ -1309,11 +1835,11 @@
         this.updateThemeIcons();
         this.updateThemeToggleState();
       }
-      
+
       toggleTheme() {
         this.setTheme(this.theme === 'dark' ? 'light' : 'dark');
       }
-      
+
       updateThemeIcons() {
         const icons = document.querySelectorAll('#themeIconEmoji, #mobileThemeIcon');
         icons.forEach(icon => {
@@ -1322,7 +1848,7 @@
           }
         });
       }
-      
+
       updateThemeToggleState() {
         const toggles = document.querySelectorAll('#themeToggle, #mobileThemeToggle');
         toggles.forEach(toggle => {
@@ -1331,10 +1857,10 @@
           }
         });
       }
-      
+
       init() {
         this.setTheme(this.theme);
-        
+
         // Listen for system theme changes
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
           if (!this.getStoredTheme()) {
@@ -1343,9 +1869,9 @@
         });
       }
     }
-    
+
     const themeManager = new ThemeManager();
-    
+
     // Theme toggle handlers
     document.getElementById('themeToggle')?.addEventListener('click', () => {
       themeManager.toggleTheme();
@@ -1354,15 +1880,15 @@
         document.getElementById('themeIconEmoji')?.classList.remove('animate-spin-slow');
       }, 700);
     });
-    
+
     document.getElementById('mobileThemeToggle')?.addEventListener('click', () => {
       themeManager.toggleTheme();
     });
-    
+
     // ===== Professional Loading Screen =====
     window.addEventListener('load', () => {
       const loadingScreen = document.getElementById('loading');
-      
+
       // Simulate loading progress
       const progressBar = document.querySelector('.loader-progress-bar');
       if (progressBar) {
@@ -1371,7 +1897,7 @@
           progress += Math.random() * 15;
           if (progress > 100) progress = 100;
           progressBar.style.width = progress + '%';
-          
+
           if (progress >= 100) {
             clearInterval(interval);
             setTimeout(() => {
@@ -1399,14 +1925,14 @@
         }, 2000);
       }
     });
-    
+
     // ===== Scroll Fade-In Animations =====
     function initScrollAnimations() {
       const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
       };
-      
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -1414,17 +1940,17 @@
           }
         });
       }, observerOptions);
-      
+
       document.querySelectorAll('.fade-in-up').forEach(el => {
         observer.observe(el);
       });
     }
-    
+
     // ===== Mobile Menu =====
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
-    
+
     if (mobileMenuToggle && mobileMenu) {
       mobileMenuToggle.addEventListener('click', () => {
         const isOpen = !mobileMenu.classList.contains('-translate-x-full');
@@ -1432,7 +1958,7 @@
         mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
         menuIcon.textContent = isOpen ? '☰' : '✕';
       });
-      
+
       // Close menu on link click
       mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
@@ -1441,7 +1967,7 @@
           menuIcon.textContent = '☰';
         });
       });
-      
+
       // Close menu on escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !mobileMenu.classList.contains('-translate-x-full')) {
@@ -1451,13 +1977,13 @@
         }
       });
     }
-    
+
     // ===== Smooth Scrolling =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (href === '#') return;
-        
+
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
@@ -1468,36 +1994,36 @@
         }
       });
     });
-    
+
     // ===== Three.js Scene (with error handling) =====
     function initThreeJS() {
       if (typeof THREE === 'undefined') {
         console.warn('Three.js not loaded');
         return;
       }
-      
+
       try {
         const container = document.getElementById('three-container');
         if (!container) return;
-        
+
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-        
+
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         container.appendChild(renderer.domElement);
-        
+
         const geometry = new THREE.SphereGeometry(0.5, 8, 8);
-        const material = new THREE.MeshBasicMaterial({ 
-          color: 0x3b82f6, 
-          transparent: true, 
-          opacity: 0.6 
+        const material = new THREE.MeshBasicMaterial({
+          color: 0x3b82f6,
+          transparent: true,
+          opacity: 0.6
         });
-        
+
         const particles = [];
         const particleCount = window.innerWidth < 768 ? 25 : 50;
-        
+
         for (let i = 0; i < particleCount; i++) {
           const particle = new THREE.Mesh(geometry, material);
           particle.position.set(
@@ -1513,31 +2039,31 @@
           scene.add(particle);
           particles.push(particle);
         }
-        
+
         camera.position.z = 30;
-        
+
         let animationId;
         function animate() {
           animationId = requestAnimationFrame(animate);
-          
+
           particles.forEach(particle => {
             particle.position.x += particle.velocity.x;
             particle.position.y += particle.velocity.y;
             particle.position.z += particle.velocity.z;
-            
+
             if (Math.abs(particle.position.x) > 50) particle.velocity.x *= -1;
             if (Math.abs(particle.position.y) > 50) particle.velocity.y *= -1;
             if (Math.abs(particle.position.z) > 50) particle.velocity.z *= -1;
-            
+
             particle.rotation.x += 0.01;
             particle.rotation.y += 0.01;
           });
-          
+
           renderer.render(scene, camera);
         }
-        
+
         animate();
-        
+
         // Handle resize
         let resizeTimeout;
         window.addEventListener('resize', () => {
@@ -1552,7 +2078,7 @@
         console.error('Three.js initialization error:', error);
       }
     }
-    
+
     // Initialize Three.js when loaded
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', () => {
@@ -1561,17 +2087,17 @@
     } else {
       setTimeout(initThreeJS, 100);
     }
-    
+
     // ===== GSAP ScrollTrigger Animations =====
     function initGSAP() {
       if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
         console.warn('GSAP not loaded');
         return;
       }
-      
+
       try {
         gsap.registerPlugin(ScrollTrigger);
-        
+
         // Parallax effect for hero
         gsap.to('#hero', {
           backgroundPosition: '50% 100%',
@@ -1583,10 +2109,10 @@
             scrub: true
           }
         });
-        
+
         // Animate sections on scroll
         gsap.utils.toArray('section').forEach(section => {
-          gsap.fromTo(section, 
+          gsap.fromTo(section,
             { opacity: 0, y: 50 },
             {
               opacity: 1,
@@ -1605,44 +2131,44 @@
         console.error('GSAP initialization error:', error);
       }
     }
-    
+
     // Initialize GSAP when loaded
     window.addEventListener('load', () => {
       setTimeout(initGSAP, 100);
     });
-    
+
     // ===== Form Handling =====
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
       contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const formData = new FormData(contactForm);
         const data = {
           name: formData.get('name'),
           email: formData.get('email'),
           message: formData.get('message')
         };
-        
+
         // Basic validation
         if (!data.name || !data.email || !data.message) {
           alert('Please fill in all fields.');
           return;
         }
-        
+
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(data.email)) {
           alert('Please enter a valid email address.');
           return;
         }
-        
+
         // Show success message
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalText = submitButton.textContent;
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
-        
+
         setTimeout(() => {
           alert('Thank you for your message! I\'ll get back to you soon.');
           contactForm.reset();
@@ -1651,11 +2177,11 @@
         }, 1000);
       });
     }
-    
+
     // ===== Intersection Observer for Active Nav States =====
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
-    
+
     if (sections.length && navLinks.length) {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -1669,17 +2195,17 @@
           }
         });
       }, { threshold: 0.3 });
-      
+
       sections.forEach(section => observer.observe(section));
     }
-    
+
     // ===== Typewriter Effect =====
     function typeWriterEffect(elementId, cursorId, text, speed, callback) {
       const el = document.getElementById(elementId);
       const cursor = document.getElementById(cursorId);
-      
+
       if (!el || !cursor) return;
-      
+
       let i = 0;
       function type() {
         if (i < text.length) {
@@ -1696,7 +2222,7 @@
           if (callback) callback();
         }
       }
-      
+
       el.textContent = '';
       if (cursor) {
         cursor.style.opacity = '1';
@@ -1705,7 +2231,7 @@
       }
       type();
     }
-    
+
     // Initialize typewriter on load
     window.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
@@ -1716,7 +2242,7 @@
         });
       }, 500);
     });
-    
+
     // ===== Performance: Lazy load images and reduce animations on low-end devices =====
     if ('connection' in navigator) {
       const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
@@ -1724,7 +2250,7 @@
         document.documentElement.classList.add('reduce-motion');
       }
     }
-    
+
     // ===== Accessibility: Skip to main content =====
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Tab' && !e.shiftKey && document.activeElement === document.body) {
@@ -1737,4 +2263,5 @@
     });
   </script>
 </body>
+
 </html>
